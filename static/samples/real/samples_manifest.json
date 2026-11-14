@@ -1,0 +1,1091 @@
+[
+  {
+    "id": "tomato_early_blight",
+    "crop": "Tomato",
+    "condition_slug": "early_blight",
+    "disease_name": "Tomato Early Blight",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Dark brown circular lesions with concentric rings",
+      "Chlorotic yellow halo surrounding lesions"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_early_blight_1.jpg",
+        "url": "/static/samples/real/tomato_early_blight_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Early_blight\\IMG20220325133411.jpg"
+      },
+      {
+        "filename": "tomato_early_blight_2.jpg",
+        "url": "/static/samples/real/tomato_early_blight_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Early_blight\\IMG20220323103125_3.jpg"
+      },
+      {
+        "filename": "tomato_early_blight_3.jpg",
+        "url": "/static/samples/real/tomato_early_blight_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Early_blight\\IMG20220323100636.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_early_blight_1.jpg",
+      "url": "/static/samples/real/tomato_early_blight_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Early_blight\\IMG20220325133411.jpg"
+    }
+  },
+  {
+    "id": "tomato_late_blight",
+    "crop": "Tomato",
+    "condition_slug": "late_blight",
+    "disease_name": "Tomato Late Blight",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Water-soaked dark lesions",
+      "Rapid tissue collapse and browning"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_late_blight_1.jpg",
+        "url": "/static/samples/real/tomato_late_blight_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Late_blight\\IMG20220323122907.jpg"
+      },
+      {
+        "filename": "tomato_late_blight_2.jpg",
+        "url": "/static/samples/real/tomato_late_blight_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Late_blight\\IMG20220324105456_3.jpg"
+      },
+      {
+        "filename": "tomato_late_blight_3.jpg",
+        "url": "/static/samples/real/tomato_late_blight_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Late_blight\\IMG20220323180803_6.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_late_blight_1.jpg",
+      "url": "/static/samples/real/tomato_late_blight_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Late_blight\\IMG20220323122907.jpg"
+    }
+  },
+  {
+    "id": "tomato_leaf_miner",
+    "crop": "Tomato",
+    "condition_slug": "leaf_miner",
+    "disease_name": "Tomato Leaf Miner",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Serpentine white/translucent trails winding across leaf",
+      "Damaged photosynthetic tissue"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_leaf_miner_1.jpg",
+        "url": "/static/samples/real/tomato_leaf_miner_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Leaf Miner\\IMG20220324175951.jpg"
+      },
+      {
+        "filename": "tomato_leaf_miner_2.jpg",
+        "url": "/static/samples/real/tomato_leaf_miner_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Leaf Miner\\IMG20220325113152.jpg"
+      },
+      {
+        "filename": "tomato_leaf_miner_3.jpg",
+        "url": "/static/samples/real/tomato_leaf_miner_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Leaf Miner\\IMG20220325114027.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_leaf_miner_1.jpg",
+      "url": "/static/samples/real/tomato_leaf_miner_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Leaf Miner\\IMG20220324175951.jpg"
+    }
+  },
+  {
+    "id": "tomato_magnesium_deficiency",
+    "crop": "Tomato",
+    "condition_slug": "magnesium_deficiency",
+    "disease_name": "Tomato Magnesium Deficiency",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Interveinal chlorosis (yellowing between green veins)",
+      "Older lower leaves affected first"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_magnesium_deficiency_1.jpg",
+        "url": "/static/samples/real/tomato_magnesium_deficiency_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Magnesium Deficiency\\IMG20220324175435_4.jpg"
+      },
+      {
+        "filename": "tomato_magnesium_deficiency_2.jpg",
+        "url": "/static/samples/real/tomato_magnesium_deficiency_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Magnesium Deficiency\\IMG20220325105726_5.jpg"
+      },
+      {
+        "filename": "tomato_magnesium_deficiency_3.jpg",
+        "url": "/static/samples/real/tomato_magnesium_deficiency_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Magnesium Deficiency\\IMG20220325110747_4.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_magnesium_deficiency_1.jpg",
+      "url": "/static/samples/real/tomato_magnesium_deficiency_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Magnesium Deficiency\\IMG20220324175435_4.jpg"
+    }
+  },
+  {
+    "id": "tomato_nitrogen_deficiency",
+    "crop": "Tomato",
+    "condition_slug": "nitrogen_deficiency",
+    "disease_name": "Tomato Nitrogen Deficiency",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Generalized pale green to yellow discoloration",
+      "Thinning leaf canopy and stunted vigor"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_nitrogen_deficiency_1.jpg",
+        "url": "/static/samples/real/tomato_nitrogen_deficiency_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Nitrogen Deficiency\\IMG20220325113600_4.jpg"
+      },
+      {
+        "filename": "tomato_nitrogen_deficiency_2.jpg",
+        "url": "/static/samples/real/tomato_nitrogen_deficiency_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Nitrogen Deficiency\\IMG20220323180851_5.jpg"
+      },
+      {
+        "filename": "tomato_nitrogen_deficiency_3.jpg",
+        "url": "/static/samples/real/tomato_nitrogen_deficiency_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Nitrogen Deficiency\\IMG20220324110336_4.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_nitrogen_deficiency_1.jpg",
+      "url": "/static/samples/real/tomato_nitrogen_deficiency_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Nitrogen Deficiency\\IMG20220325113600_4.jpg"
+    }
+  },
+  {
+    "id": "tomato_potassium_deficiency",
+    "crop": "Tomato",
+    "condition_slug": "potassium_deficiency",
+    "disease_name": "Tomato Potassium Deficiency",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Marginal leaf necrosis and scorching",
+      "Curling upward of leaf edges"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_potassium_deficiency_1.jpg",
+        "url": "/static/samples/real/tomato_potassium_deficiency_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Pottassium Deficiency\\IMG20220325110545_5.jpg"
+      },
+      {
+        "filename": "tomato_potassium_deficiency_2.jpg",
+        "url": "/static/samples/real/tomato_potassium_deficiency_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Pottassium Deficiency\\IMG20220324110332_5.jpg"
+      },
+      {
+        "filename": "tomato_potassium_deficiency_3.jpg",
+        "url": "/static/samples/real/tomato_potassium_deficiency_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Pottassium Deficiency\\IMG20220325110547_3.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_potassium_deficiency_1.jpg",
+      "url": "/static/samples/real/tomato_potassium_deficiency_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Pottassium Deficiency\\IMG20220325110545_5.jpg"
+    }
+  },
+  {
+    "id": "tomato_spotted_wilt_virus",
+    "crop": "Tomato",
+    "condition_slug": "spotted_wilt_virus",
+    "disease_name": "Tomato Spotted Wilt Virus",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Bronze or dark brown specks and rings",
+      "Distorted leaf cupping and terminal shoot dieback"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_spotted_wilt_virus_1.jpg",
+        "url": "/static/samples/real/tomato_spotted_wilt_virus_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Spotted Wilt Virus\\IMG20220324182817.jpg"
+      },
+      {
+        "filename": "tomato_spotted_wilt_virus_2.jpg",
+        "url": "/static/samples/real/tomato_spotted_wilt_virus_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Spotted Wilt Virus\\IMG20220323180543.jpg"
+      },
+      {
+        "filename": "tomato_spotted_wilt_virus_3.jpg",
+        "url": "/static/samples/real/tomato_spotted_wilt_virus_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Spotted Wilt Virus\\IMG20220323104013.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_spotted_wilt_virus_1.jpg",
+      "url": "/static/samples/real/tomato_spotted_wilt_virus_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Spotted Wilt Virus\\IMG20220324182817.jpg"
+    }
+  },
+  {
+    "id": "tomato_healthy",
+    "crop": "Tomato",
+    "condition_slug": "healthy",
+    "disease_name": "Tomato Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Vibrant uniform green foliage",
+      "Intact leaf margins and structure"
+    ],
+    "samples": [
+      {
+        "filename": "tomato_healthy_1.jpg",
+        "url": "/static/samples/real/tomato_healthy_1.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Healthy\\IMG20220324110910.jpg"
+      },
+      {
+        "filename": "tomato_healthy_2.jpg",
+        "url": "/static/samples/real/tomato_healthy_2.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Healthy\\IMG20220325114131.jpg"
+      },
+      {
+        "filename": "tomato_healthy_3.jpg",
+        "url": "/static/samples/real/tomato_healthy_3.jpg",
+        "dataset_source": "Tomata Dataset\\train\\Healthy\\IMG20220325121221.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "tomato_healthy_1.jpg",
+      "url": "/static/samples/real/tomato_healthy_1.jpg",
+      "dataset_source": "Tomata Dataset\\train\\Healthy\\IMG20220324110910.jpg"
+    }
+  },
+  {
+    "id": "rice_bacterial_leaf_blight",
+    "crop": "Rice",
+    "condition_slug": "bacterial_leaf_blight",
+    "disease_name": "Rice Bacterial Leaf Blight",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Water-soaked to yellowish-white wavy marginal stripes",
+      "Bacterial ooze droplets along leaf veins"
+    ],
+    "samples": [
+      {
+        "filename": "rice_bacterial_leaf_blight_1.jpg",
+        "url": "/static/samples/real/rice_bacterial_leaf_blight_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Bacterial Leaf Blight\\IMG_20231014_173621.jpg"
+      },
+      {
+        "filename": "rice_bacterial_leaf_blight_2.jpg",
+        "url": "/static/samples/real/rice_bacterial_leaf_blight_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Bacterial Leaf Blight\\IMG_20231014_172351.jpg"
+      },
+      {
+        "filename": "rice_bacterial_leaf_blight_3.jpg",
+        "url": "/static/samples/real/rice_bacterial_leaf_blight_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Bacterial Leaf Blight\\IMG_20231014_172606_1.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_bacterial_leaf_blight_1.jpg",
+      "url": "/static/samples/real/rice_bacterial_leaf_blight_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Bacterial Leaf Blight\\IMG_20231014_173621.jpg"
+    }
+  },
+  {
+    "id": "rice_brown_spot",
+    "crop": "Rice",
+    "condition_slug": "brown_spot",
+    "disease_name": "Rice Brown Spot",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Small cylindrical to oval dark brown spots",
+      "Greyish or whitish center with yellow halo"
+    ],
+    "samples": [
+      {
+        "filename": "rice_brown_spot_1.jpg",
+        "url": "/static/samples/real/rice_brown_spot_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Brown Spot\\Brown_spot (203).jpg"
+      },
+      {
+        "filename": "rice_brown_spot_2.jpg",
+        "url": "/static/samples/real/rice_brown_spot_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Brown Spot\\Brown_spot (70).jpg"
+      },
+      {
+        "filename": "rice_brown_spot_3.jpg",
+        "url": "/static/samples/real/rice_brown_spot_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Brown Spot\\Brown_spot (82).jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_brown_spot_1.jpg",
+      "url": "/static/samples/real/rice_brown_spot_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Brown Spot\\Brown_spot (203).jpg"
+    }
+  },
+  {
+    "id": "rice_leaf_blast",
+    "crop": "Rice",
+    "condition_slug": "leaf_blast",
+    "disease_name": "Rice Leaf Blast",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Diamond/spindle-shaped lesions with pointed ends",
+      "Greyish-white center surrounded by dark brown margin"
+    ],
+    "samples": [
+      {
+        "filename": "rice_leaf_blast_1.jpg",
+        "url": "/static/samples/real/rice_leaf_blast_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf Blast\\IMG_20231018_143200.jpg"
+      },
+      {
+        "filename": "rice_leaf_blast_2.jpg",
+        "url": "/static/samples/real/rice_leaf_blast_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf Blast\\20231006_170253(2).jpg"
+      },
+      {
+        "filename": "rice_leaf_blast_3.jpg",
+        "url": "/static/samples/real/rice_leaf_blast_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf Blast\\IMG_20231018_144141.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_leaf_blast_1.jpg",
+      "url": "/static/samples/real/rice_leaf_blast_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Leaf Blast\\IMG_20231018_143200.jpg"
+    }
+  },
+  {
+    "id": "rice_leaf_scald",
+    "crop": "Rice",
+    "condition_slug": "leaf_scald",
+    "disease_name": "Rice Leaf Scald",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Zonate chevron-like olive-green to bleach-colored banding",
+      "Lesions develop from leaf tip downward"
+    ],
+    "samples": [
+      {
+        "filename": "rice_leaf_scald_1.jpg",
+        "url": "/static/samples/real/rice_leaf_scald_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf scald\\Leaf_scald (95).jpg"
+      },
+      {
+        "filename": "rice_leaf_scald_2.jpg",
+        "url": "/static/samples/real/rice_leaf_scald_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf scald\\IMG_20231014_173227_1.jpg"
+      },
+      {
+        "filename": "rice_leaf_scald_3.jpg",
+        "url": "/static/samples/real/rice_leaf_scald_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Leaf scald\\Leaf_scald (42).jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_leaf_scald_1.jpg",
+      "url": "/static/samples/real/rice_leaf_scald_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Leaf scald\\Leaf_scald (95).jpg"
+    }
+  },
+  {
+    "id": "rice_narrow_brown_leaf_spot",
+    "crop": "Rice",
+    "condition_slug": "narrow_brown_leaf_spot",
+    "disease_name": "Rice Narrow Brown Leaf Spot",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Narrow linear short brown streaks parallel to leaf veins",
+      "Premature foliage drying"
+    ],
+    "samples": [
+      {
+        "filename": "rice_narrow_brown_leaf_spot_1.jpg",
+        "url": "/static/samples/real/rice_narrow_brown_leaf_spot_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Narrow Brown Leaf Spot\\IMG_20231014_172413.jpg"
+      },
+      {
+        "filename": "rice_narrow_brown_leaf_spot_2.jpg",
+        "url": "/static/samples/real/rice_narrow_brown_leaf_spot_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Narrow Brown Leaf Spot\\Narrow_brown_leaf_spot (11).jpg"
+      },
+      {
+        "filename": "rice_narrow_brown_leaf_spot_3.jpg",
+        "url": "/static/samples/real/rice_narrow_brown_leaf_spot_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Narrow Brown Leaf Spot\\Narrow_brown_leaf_spot (31).jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_narrow_brown_leaf_spot_1.jpg",
+      "url": "/static/samples/real/rice_narrow_brown_leaf_spot_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Narrow Brown Leaf Spot\\IMG_20231014_172413.jpg"
+    }
+  },
+  {
+    "id": "rice_rice_hispa",
+    "crop": "Rice",
+    "condition_slug": "rice_hispa",
+    "disease_name": "Rice Hispa Pest Damage",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Parallel white streaks scraped along epidermis",
+      "Blister-like blotches where larvae feed"
+    ],
+    "samples": [
+      {
+        "filename": "rice_rice_hispa_1.jpg",
+        "url": "/static/samples/real/rice_rice_hispa_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Rice Hispa\\Rice_Hispa (112).jpg"
+      },
+      {
+        "filename": "rice_rice_hispa_2.jpg",
+        "url": "/static/samples/real/rice_rice_hispa_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Rice Hispa\\Rice_Hispa (157).jpg"
+      },
+      {
+        "filename": "rice_rice_hispa_3.jpg",
+        "url": "/static/samples/real/rice_rice_hispa_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Rice Hispa\\Rice_Hispa (129).jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_rice_hispa_1.jpg",
+      "url": "/static/samples/real/rice_rice_hispa_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Rice Hispa\\Rice_Hispa (112).jpg"
+    }
+  },
+  {
+    "id": "rice_sheath_blight",
+    "crop": "Rice",
+    "condition_slug": "sheath_blight",
+    "disease_name": "Rice Sheath Blight",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Oval to irregular greenish-grey water-soaked spots",
+      "Lesions coalesce with purplish-brown margins"
+    ],
+    "samples": [
+      {
+        "filename": "rice_sheath_blight_1.jpg",
+        "url": "/static/samples/real/rice_sheath_blight_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Sheath Blight\\Sheath_Blight (18).jpg"
+      },
+      {
+        "filename": "rice_sheath_blight_2.jpg",
+        "url": "/static/samples/real/rice_sheath_blight_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Sheath Blight\\IMG_20231006_163218 - Copy.jpg"
+      },
+      {
+        "filename": "rice_sheath_blight_3.jpg",
+        "url": "/static/samples/real/rice_sheath_blight_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Sheath Blight\\Sheath_Blight (125).jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_sheath_blight_1.jpg",
+      "url": "/static/samples/real/rice_sheath_blight_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Sheath Blight\\Sheath_Blight (18).jpg"
+    }
+  },
+  {
+    "id": "rice_healthy",
+    "crop": "Rice",
+    "condition_slug": "healthy",
+    "disease_name": "Rice Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Vigorous upright green blade",
+      "Even coloration without spots or lesions"
+    ],
+    "samples": [
+      {
+        "filename": "rice_healthy_1.jpg",
+        "url": "/static/samples/real/rice_healthy_1.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Healthy Rice Leaf\\Healthy_rice_leaf (107).jpg"
+      },
+      {
+        "filename": "rice_healthy_2.jpg",
+        "url": "/static/samples/real/rice_healthy_2.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Healthy Rice Leaf\\Healthy_rice_leaf (54).jpg"
+      },
+      {
+        "filename": "rice_healthy_3.jpg",
+        "url": "/static/samples/real/rice_healthy_3.jpg",
+        "dataset_source": "Rice leaf disease\\Training data\\Healthy Rice Leaf\\20231006_165518.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "rice_healthy_1.jpg",
+      "url": "/static/samples/real/rice_healthy_1.jpg",
+      "dataset_source": "Rice leaf disease\\Training data\\Healthy Rice Leaf\\Healthy_rice_leaf (107).jpg"
+    }
+  },
+  {
+    "id": "chilli_cercospora",
+    "crop": "Chilli",
+    "condition_slug": "cercospora",
+    "disease_name": "Chilli Cercospora Leaf Spot",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Frogeye circular spots with light grey center and dark red/brown border",
+      "Severe premature defoliation"
+    ],
+    "samples": [
+      {
+        "filename": "chilli_cercospora_1.jpg",
+        "url": "/static/samples/real/chilli_cercospora_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_cercospora\\cercospora_28_1987.jpg"
+      },
+      {
+        "filename": "chilli_cercospora_2.jpg",
+        "url": "/static/samples/real/chilli_cercospora_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_cercospora\\cercospora_28_8630.jpg"
+      },
+      {
+        "filename": "chilli_cercospora_3.jpg",
+        "url": "/static/samples/real/chilli_cercospora_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_cercospora\\cercospora_28_5315.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "chilli_cercospora_1.jpg",
+      "url": "/static/samples/real/chilli_cercospora_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\chili_cercospora\\cercospora_28_1987.jpg"
+    }
+  },
+  {
+    "id": "chilli_mites_and_trips",
+    "crop": "Chilli",
+    "condition_slug": "mites_and_trips",
+    "disease_name": "Chilli Mites & Thrips Infestation",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Upward leaf curling (thrips) or downward boat-shaped curling (mites)",
+      "Crinkling, thickening and bronzing"
+    ],
+    "samples": [
+      {
+        "filename": "chilli_mites_and_trips_1.jpg",
+        "url": "/static/samples/real/chilli_mites_and_trips_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_mites_and_trips\\mites_trips_35_324.jpg"
+      },
+      {
+        "filename": "chilli_mites_and_trips_2.jpg",
+        "url": "/static/samples/real/chilli_mites_and_trips_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_mites_and_trips\\mites_trips_19_7350.jpg"
+      },
+      {
+        "filename": "chilli_mites_and_trips_3.jpg",
+        "url": "/static/samples/real/chilli_mites_and_trips_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_mites_and_trips\\mites_trips_62_1243.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "chilli_mites_and_trips_1.jpg",
+      "url": "/static/samples/real/chilli_mites_and_trips_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\chili_mites_and_trips\\mites_trips_35_324.jpg"
+    }
+  },
+  {
+    "id": "chilli_nutritional",
+    "crop": "Chilli",
+    "condition_slug": "nutritional",
+    "disease_name": "Chilli Nutritional Deficiency",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Pale yellow chlorotic leaves with stunted growth",
+      "Interveinal yellowing with weak branching"
+    ],
+    "samples": [
+      {
+        "filename": "chilli_nutritional_1.jpg",
+        "url": "/static/samples/real/chilli_nutritional_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_nutritional\\nutritional_45_125.jpg"
+      },
+      {
+        "filename": "chilli_nutritional_2.jpg",
+        "url": "/static/samples/real/chilli_nutritional_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_nutritional\\nutritional_42_2306.jpg"
+      },
+      {
+        "filename": "chilli_nutritional_3.jpg",
+        "url": "/static/samples/real/chilli_nutritional_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_nutritional\\nutritional_27_7837.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "chilli_nutritional_1.jpg",
+      "url": "/static/samples/real/chilli_nutritional_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\chili_nutritional\\nutritional_45_125.jpg"
+    }
+  },
+  {
+    "id": "chilli_powdery_mildew",
+    "crop": "Chilli",
+    "condition_slug": "powdery_mildew",
+    "disease_name": "Chilli Powdery Mildew",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "White powdery fungal patches on lower leaf surface",
+      "Chlorotic blotches on upper leaf surface"
+    ],
+    "samples": [
+      {
+        "filename": "chilli_powdery_mildew_1.jpg",
+        "url": "/static/samples/real/chilli_powdery_mildew_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_powdery mildew\\powdery mildew_66_5340.jpg"
+      },
+      {
+        "filename": "chilli_powdery_mildew_2.jpg",
+        "url": "/static/samples/real/chilli_powdery_mildew_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_powdery mildew\\powdery mildew_2_7430.jpg"
+      },
+      {
+        "filename": "chilli_powdery_mildew_3.jpg",
+        "url": "/static/samples/real/chilli_powdery_mildew_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_powdery mildew\\powdery mildew_34_1440.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "chilli_powdery_mildew_1.jpg",
+      "url": "/static/samples/real/chilli_powdery_mildew_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\chili_powdery mildew\\powdery mildew_66_5340.jpg"
+    }
+  },
+  {
+    "id": "chilli_healthy",
+    "crop": "Chilli",
+    "condition_slug": "healthy",
+    "disease_name": "Chilli Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Deep glossy green foliage",
+      "Smooth intact lamina without curling or spots"
+    ],
+    "samples": [
+      {
+        "filename": "chilli_healthy_1.jpg",
+        "url": "/static/samples/real/chilli_healthy_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_healthy\\healthy_9_6789.jpg"
+      },
+      {
+        "filename": "chilli_healthy_2.jpg",
+        "url": "/static/samples/real/chilli_healthy_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_healthy\\healthy_21_2222.jpg"
+      },
+      {
+        "filename": "chilli_healthy_3.jpg",
+        "url": "/static/samples/real/chilli_healthy_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\chili_healthy\\healthy_13_8661.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "chilli_healthy_1.jpg",
+      "url": "/static/samples/real/chilli_healthy_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\chili_healthy\\healthy_9_6789.jpg"
+    }
+  },
+  {
+    "id": "sugarcane_mosaic",
+    "crop": "Sugarcane",
+    "condition_slug": "mosaic",
+    "disease_name": "Sugarcane Mosaic Virus",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Contrasting dark and pale green mottled patches",
+      "Linear patchy chlorotic stripes along blade"
+    ],
+    "samples": [
+      {
+        "filename": "sugarcane_mosaic_1.jpeg",
+        "url": "/static/samples/real/sugarcane_mosaic_1.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Mosaic\\mosaic (372)_aug_2.jpeg"
+      },
+      {
+        "filename": "sugarcane_mosaic_2.jpeg",
+        "url": "/static/samples/real/sugarcane_mosaic_2.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Mosaic\\mosaic (372).jpeg"
+      },
+      {
+        "filename": "sugarcane_mosaic_3.jpeg",
+        "url": "/static/samples/real/sugarcane_mosaic_3.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Mosaic\\mosaic (28)_aug_2.jpeg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "sugarcane_mosaic_1.jpeg",
+      "url": "/static/samples/real/sugarcane_mosaic_1.jpeg",
+      "dataset_source": "BCSS Dataset\\dataset\\sugercane_Mosaic\\mosaic (372)_aug_2.jpeg"
+    }
+  },
+  {
+    "id": "sugarcane_red_rot",
+    "crop": "Sugarcane",
+    "condition_slug": "red_rot",
+    "disease_name": "Sugarcane Red Rot",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Reddish lesions on leaf midrib with white cross bands",
+      "Withering of crown foliage and internal red tissue"
+    ],
+    "samples": [
+      {
+        "filename": "sugarcane_red_rot_1.jpeg",
+        "url": "/static/samples/real/sugarcane_red_rot_1.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_RedRot\\redrot (392).jpeg"
+      },
+      {
+        "filename": "sugarcane_red_rot_2.jpeg",
+        "url": "/static/samples/real/sugarcane_red_rot_2.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_RedRot\\redrot (176).jpeg"
+      },
+      {
+        "filename": "sugarcane_red_rot_3.jpeg",
+        "url": "/static/samples/real/sugarcane_red_rot_3.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_RedRot\\redrot (487).jpeg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "sugarcane_red_rot_1.jpeg",
+      "url": "/static/samples/real/sugarcane_red_rot_1.jpeg",
+      "dataset_source": "BCSS Dataset\\dataset\\sugercane_RedRot\\redrot (392).jpeg"
+    }
+  },
+  {
+    "id": "sugarcane_rust",
+    "crop": "Sugarcane",
+    "condition_slug": "rust",
+    "disease_name": "Sugarcane Rust",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "Elongated small yellowish spots turning reddish-brown pustules",
+      "Powdery brown spore ruptures on leaf underside"
+    ],
+    "samples": [
+      {
+        "filename": "sugarcane_rust_1.jpeg",
+        "url": "/static/samples/real/sugarcane_rust_1.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Rust\\rust (354).jpeg"
+      },
+      {
+        "filename": "sugarcane_rust_2.jpeg",
+        "url": "/static/samples/real/sugarcane_rust_2.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Rust\\rust (277).jpeg"
+      },
+      {
+        "filename": "sugarcane_rust_3.jpeg",
+        "url": "/static/samples/real/sugarcane_rust_3.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Rust\\rust (276)_aug_1.jpeg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "sugarcane_rust_1.jpeg",
+      "url": "/static/samples/real/sugarcane_rust_1.jpeg",
+      "dataset_source": "BCSS Dataset\\dataset\\sugercane_Rust\\rust (354).jpeg"
+    }
+  },
+  {
+    "id": "sugarcane_yellow_leaf",
+    "crop": "Sugarcane",
+    "condition_slug": "yellow_leaf",
+    "disease_name": "Sugarcane Yellow Leaf Disease",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Intense yellowing of midrib on 3rd to 6th leaves",
+      "Yellow discoloration spreads to leaf lamina"
+    ],
+    "samples": [
+      {
+        "filename": "sugarcane_yellow_leaf_1.jpeg",
+        "url": "/static/samples/real/sugarcane_yellow_leaf_1.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Yellow\\yellow (142)_aug_1.jpeg"
+      },
+      {
+        "filename": "sugarcane_yellow_leaf_2.jpeg",
+        "url": "/static/samples/real/sugarcane_yellow_leaf_2.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Yellow\\yellow (290)_aug_2.jpeg"
+      },
+      {
+        "filename": "sugarcane_yellow_leaf_3.jpeg",
+        "url": "/static/samples/real/sugarcane_yellow_leaf_3.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Yellow\\yellow (366)_aug_2.jpeg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "sugarcane_yellow_leaf_1.jpeg",
+      "url": "/static/samples/real/sugarcane_yellow_leaf_1.jpeg",
+      "dataset_source": "BCSS Dataset\\dataset\\sugercane_Yellow\\yellow (142)_aug_1.jpeg"
+    }
+  },
+  {
+    "id": "sugarcane_healthy",
+    "crop": "Sugarcane",
+    "condition_slug": "healthy",
+    "disease_name": "Sugarcane Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Long, robust, dark green arching leaf blades",
+      "Clean white-green central midrib"
+    ],
+    "samples": [
+      {
+        "filename": "sugarcane_healthy_1.jpeg",
+        "url": "/static/samples/real/sugarcane_healthy_1.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Healthy\\healthy (145).jpeg"
+      },
+      {
+        "filename": "sugarcane_healthy_2.jpeg",
+        "url": "/static/samples/real/sugarcane_healthy_2.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Healthy\\healthy (170).jpeg"
+      },
+      {
+        "filename": "sugarcane_healthy_3.jpeg",
+        "url": "/static/samples/real/sugarcane_healthy_3.jpeg",
+        "dataset_source": "BCSS Dataset\\dataset\\sugercane_Healthy\\healthy (35)_aug_2.jpeg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "sugarcane_healthy_1.jpeg",
+      "url": "/static/samples/real/sugarcane_healthy_1.jpeg",
+      "dataset_source": "BCSS Dataset\\dataset\\sugercane_Healthy\\healthy (145).jpeg"
+    }
+  },
+  {
+    "id": "blackgram_anthracnose",
+    "crop": "Blackgram",
+    "condition_slug": "anthracnose",
+    "disease_name": "Blackgram Anthracnose",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Circular to angular sunken brown lesions on leaves and pods",
+      "Dark purplish-brown borders"
+    ],
+    "samples": [
+      {
+        "filename": "blackgram_anthracnose_1.jpg",
+        "url": "/static/samples/real/blackgram_anthracnose_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Anthracnose\\29a_aug_4.jpg"
+      },
+      {
+        "filename": "blackgram_anthracnose_2.jpg",
+        "url": "/static/samples/real/blackgram_anthracnose_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Anthracnose\\187a_aug_2.jpg"
+      },
+      {
+        "filename": "blackgram_anthracnose_3.jpg",
+        "url": "/static/samples/real/blackgram_anthracnose_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Anthracnose\\66a_aug_3.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "blackgram_anthracnose_1.jpg",
+      "url": "/static/samples/real/blackgram_anthracnose_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\blackgram_Anthracnose\\29a_aug_4.jpg"
+    }
+  },
+  {
+    "id": "blackgram_leaf_crinkle",
+    "crop": "Blackgram",
+    "condition_slug": "leaf_crinkle",
+    "disease_name": "Blackgram Leaf Crinkle Virus",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Severe crinkling, puckering and curling of leaves",
+      "Enlarged, rugose leathery leaflets with twisted margins"
+    ],
+    "samples": [
+      {
+        "filename": "blackgram_leaf_crinkle_1.jpg",
+        "url": "/static/samples/real/blackgram_leaf_crinkle_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_LeafCrinckle\\53l.jpg"
+      },
+      {
+        "filename": "blackgram_leaf_crinkle_2.jpg",
+        "url": "/static/samples/real/blackgram_leaf_crinkle_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_LeafCrinckle\\105l_aug_3.jpg"
+      },
+      {
+        "filename": "blackgram_leaf_crinkle_3.jpg",
+        "url": "/static/samples/real/blackgram_leaf_crinkle_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_LeafCrinckle\\113l.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "blackgram_leaf_crinkle_1.jpg",
+      "url": "/static/samples/real/blackgram_leaf_crinkle_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\blackgram_LeafCrinckle\\53l.jpg"
+    }
+  },
+  {
+    "id": "blackgram_powdery_mildew",
+    "crop": "Blackgram",
+    "condition_slug": "powdery_mildew",
+    "disease_name": "Blackgram Powdery Mildew",
+    "risk_level": "MEDIUM",
+    "key_symptoms": [
+      "White powdery flour-like coating spreading on upper leaf surface",
+      "Yellowing and premature shedding of infected foliage"
+    ],
+    "samples": [
+      {
+        "filename": "blackgram_powdery_mildew_1.jpg",
+        "url": "/static/samples/real/blackgram_powdery_mildew_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_PowderyMildew\\78p_aug_1.jpg"
+      },
+      {
+        "filename": "blackgram_powdery_mildew_2.jpg",
+        "url": "/static/samples/real/blackgram_powdery_mildew_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_PowderyMildew\\119p_aug_1.jpg"
+      },
+      {
+        "filename": "blackgram_powdery_mildew_3.jpg",
+        "url": "/static/samples/real/blackgram_powdery_mildew_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_PowderyMildew\\146p_aug_1.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "blackgram_powdery_mildew_1.jpg",
+      "url": "/static/samples/real/blackgram_powdery_mildew_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\blackgram_PowderyMildew\\78p_aug_1.jpg"
+    }
+  },
+  {
+    "id": "blackgram_yellow_mosaic",
+    "crop": "Blackgram",
+    "condition_slug": "yellow_mosaic",
+    "disease_name": "Blackgram Yellow Mosaic Virus",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Bright golden-yellow irregular patches interwoven with green tissue",
+      "Complete chlorosis and severe pod reduction"
+    ],
+    "samples": [
+      {
+        "filename": "blackgram_yellow_mosaic_1.jpg",
+        "url": "/static/samples/real/blackgram_yellow_mosaic_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_YellowMosaic\\160y_aug_1.jpg"
+      },
+      {
+        "filename": "blackgram_yellow_mosaic_2.jpg",
+        "url": "/static/samples/real/blackgram_yellow_mosaic_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_YellowMosaic\\195y.jpg"
+      },
+      {
+        "filename": "blackgram_yellow_mosaic_3.jpg",
+        "url": "/static/samples/real/blackgram_yellow_mosaic_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_YellowMosaic\\214y_aug_4.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "blackgram_yellow_mosaic_1.jpg",
+      "url": "/static/samples/real/blackgram_yellow_mosaic_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\blackgram_YellowMosaic\\160y_aug_1.jpg"
+    }
+  },
+  {
+    "id": "blackgram_healthy",
+    "crop": "Blackgram",
+    "condition_slug": "healthy",
+    "disease_name": "Blackgram Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Smooth trifoliate emerald green leaves",
+      "Intact ovate leaflet margins"
+    ],
+    "samples": [
+      {
+        "filename": "blackgram_healthy_1.jpg",
+        "url": "/static/samples/real/blackgram_healthy_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Healthy\\114h.jpg"
+      },
+      {
+        "filename": "blackgram_healthy_2.jpg",
+        "url": "/static/samples/real/blackgram_healthy_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Healthy\\45h.jpg"
+      },
+      {
+        "filename": "blackgram_healthy_3.jpg",
+        "url": "/static/samples/real/blackgram_healthy_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\blackgram_Healthy\\20h_aug_3.jpg"
+      }
+    ],
+    "primary_sample": {
+      "filename": "blackgram_healthy_1.jpg",
+      "url": "/static/samples/real/blackgram_healthy_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\blackgram_Healthy\\114h.jpg"
+    }
+  },
+  {
+    "id": "soybean_disease_soybean",
+    "crop": "Soybean",
+    "condition_slug": "disease_soybean",
+    "disease_name": "Soybean Leaf Disease",
+    "risk_level": "HIGH",
+    "key_symptoms": [
+      "Necrotic brown speckling and pustules across leaf surface",
+      "Yellowing and premature foliage senescence"
+    ],
+    "samples": [
+      {
+        "filename": "soybean_disease_soybean_1.jpg",
+        "url": "/static/samples/real/soybean_disease_soybean_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Disease_soybean\\Soy (502).JPG"
+      },
+      {
+        "filename": "soybean_disease_soybean_2.jpg",
+        "url": "/static/samples/real/soybean_disease_soybean_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Disease_soybean\\Soy (172).JPG"
+      },
+      {
+        "filename": "soybean_disease_soybean_3.jpg",
+        "url": "/static/samples/real/soybean_disease_soybean_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Disease_soybean\\Soy (974).JPG"
+      }
+    ],
+    "primary_sample": {
+      "filename": "soybean_disease_soybean_1.jpg",
+      "url": "/static/samples/real/soybean_disease_soybean_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\Disease_soybean\\Soy (502).JPG"
+    }
+  },
+  {
+    "id": "soybean_healthy",
+    "crop": "Soybean",
+    "condition_slug": "healthy",
+    "disease_name": "Soybean Healthy Leaf",
+    "risk_level": "LOW",
+    "key_symptoms": [
+      "Lush trifoliate green leaves with uniform surface",
+      "Healthy venation and vigorous vegetative vigor"
+    ],
+    "samples": [
+      {
+        "filename": "soybean_healthy_1.jpg",
+        "url": "/static/samples/real/soybean_healthy_1.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Healthy_soybean\\Soy (237).JPG"
+      },
+      {
+        "filename": "soybean_healthy_2.jpg",
+        "url": "/static/samples/real/soybean_healthy_2.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Healthy_soybean\\Soy (56)_bal_aug_5.JPG"
+      },
+      {
+        "filename": "soybean_healthy_3.jpg",
+        "url": "/static/samples/real/soybean_healthy_3.jpg",
+        "dataset_source": "BCSS Dataset\\dataset\\Healthy_soybean\\Soy (247)_bal_aug_7.JPG"
+      }
+    ],
+    "primary_sample": {
+      "filename": "soybean_healthy_1.jpg",
+      "url": "/static/samples/real/soybean_healthy_1.jpg",
+      "dataset_source": "BCSS Dataset\\dataset\\Healthy_soybean\\Soy (237).JPG"
+    }
+  }
+]

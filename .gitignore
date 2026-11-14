@@ -1,0 +1,32 @@
+# Python environments and caches
+.venv/
+.runtime/
+__pycache__/
+*.py[cod]
+
+# Local databases, uploads, logs, and backups
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.bak
+uploads/
+
+# Large image datasets and generated datasets
+train/
+test/
+dataset/
+Dataset new/
+PlantVillage-Dataset-master/
+CoLeaf DATASET/
+pepper/
+scratch/
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

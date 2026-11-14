@@ -1,0 +1,203 @@
+{
+  "classes": [
+    {
+      "crop": "Tomato",
+      "label": "Tomato Early Blight",
+      "slug": "tomato_early_blight",
+      "path": "Tomata Dataset\\train\\Early_blight"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Healthy",
+      "slug": "tomato_healthy",
+      "path": "Tomata Dataset\\train\\Healthy"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Late Blight",
+      "slug": "tomato_late_blight",
+      "path": "Tomata Dataset\\train\\Late_blight"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Leaf Miner",
+      "slug": "tomato_leaf_miner",
+      "path": "Tomata Dataset\\train\\Leaf Miner"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Magnesium Deficiency",
+      "slug": "tomato_magnesium_deficiency",
+      "path": "Tomata Dataset\\train\\Magnesium Deficiency"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Nitrogen Deficiency",
+      "slug": "tomato_nitrogen_deficiency",
+      "path": "Tomata Dataset\\train\\Nitrogen Deficiency"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Potassium Deficiency",
+      "slug": "tomato_potassium_deficiency",
+      "path": "Tomata Dataset\\train\\Pottassium Deficiency"
+    },
+    {
+      "crop": "Tomato",
+      "label": "Tomato Spotted Wilt Virus",
+      "slug": "tomato_spotted_wilt_virus",
+      "path": "Tomata Dataset\\train\\Spotted Wilt Virus"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Bacterial Leaf Blight",
+      "slug": "rice_bacterial_leaf_blight",
+      "path": "Rice leaf disease\\Training data\\Bacterial Leaf Blight"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Brown Spot",
+      "slug": "rice_brown_spot",
+      "path": "Rice leaf disease\\Training data\\Brown Spot"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Healthy Leaf",
+      "slug": "rice_healthy",
+      "path": "Rice leaf disease\\Training data\\Healthy Rice Leaf"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Leaf Blast",
+      "slug": "rice_leaf_blast",
+      "path": "Rice leaf disease\\Training data\\Leaf Blast"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Leaf Scald",
+      "slug": "rice_leaf_scald",
+      "path": "Rice leaf disease\\Training data\\Leaf scald"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Narrow Brown Leaf Spot",
+      "slug": "rice_narrow_brown_leaf_spot",
+      "path": "Rice leaf disease\\Training data\\Narrow Brown Leaf Spot"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Hispa Damage",
+      "slug": "rice_rice_hispa",
+      "path": "Rice leaf disease\\Training data\\Rice Hispa"
+    },
+    {
+      "crop": "Rice",
+      "label": "Rice Sheath Blight",
+      "slug": "rice_sheath_blight",
+      "path": "Rice leaf disease\\Training data\\Sheath Blight"
+    },
+    {
+      "crop": "Chilli",
+      "label": "Chilli Cercospora Leaf Spot",
+      "slug": "chilli_cercospora",
+      "path": "BCSS Dataset\\dataset\\chili_cercospora"
+    },
+    {
+      "crop": "Chilli",
+      "label": "Chilli Healthy Leaf",
+      "slug": "chilli_healthy",
+      "path": "BCSS Dataset\\dataset\\chili_healthy"
+    },
+    {
+      "crop": "Chilli",
+      "label": "Chilli Mites & Thrips",
+      "slug": "chilli_mites_and_trips",
+      "path": "BCSS Dataset\\dataset\\chili_mites_and_trips"
+    },
+    {
+      "crop": "Chilli",
+      "label": "Chilli Nutritional Deficiency",
+      "slug": "chilli_nutritional",
+      "path": "BCSS Dataset\\dataset\\chili_nutritional"
+    },
+    {
+      "crop": "Chilli",
+      "label": "Chilli Powdery Mildew",
+      "slug": "chilli_powdery_mildew",
+      "path": "BCSS Dataset\\dataset\\chili_powdery mildew"
+    },
+    {
+      "crop": "Sugarcane",
+      "label": "Sugarcane Healthy Leaf",
+      "slug": "sugarcane_healthy",
+      "path": "BCSS Dataset\\dataset\\sugercane_Healthy"
+    },
+    {
+      "crop": "Sugarcane",
+      "label": "Sugarcane Mosaic Virus",
+      "slug": "sugarcane_mosaic",
+      "path": "BCSS Dataset\\dataset\\sugercane_Mosaic"
+    },
+    {
+      "crop": "Sugarcane",
+      "label": "Sugarcane Red Rot",
+      "slug": "sugarcane_red_rot",
+      "path": "BCSS Dataset\\dataset\\sugercane_RedRot"
+    },
+    {
+      "crop": "Sugarcane",
+      "label": "Sugarcane Rust",
+      "slug": "sugarcane_rust",
+      "path": "BCSS Dataset\\dataset\\sugercane_Rust"
+    },
+    {
+      "crop": "Sugarcane",
+      "label": "Sugarcane Yellow Leaf",
+      "slug": "sugarcane_yellow_leaf",
+      "path": "BCSS Dataset\\dataset\\sugercane_Yellow"
+    },
+    {
+      "crop": "Blackgram",
+      "label": "Blackgram Anthracnose",
+      "slug": "blackgram_anthracnose",
+      "path": "BCSS Dataset\\dataset\\blackgram_Anthracnose"
+    },
+    {
+      "crop": "Blackgram",
+      "label": "Blackgram Healthy Leaf",
+      "slug": "blackgram_healthy",
+      "path": "BCSS Dataset\\dataset\\blackgram_Healthy"
+    },
+    {
+      "crop": "Blackgram",
+      "label": "Blackgram Leaf Crinkle",
+      "slug": "blackgram_leaf_crinkle",
+      "path": "BCSS Dataset\\dataset\\blackgram_LeafCrinckle"
+    },
+    {
+      "crop": "Blackgram",
+      "label": "Blackgram Powdery Mildew",
+      "slug": "blackgram_powdery_mildew",
+      "path": "BCSS Dataset\\dataset\\blackgram_PowderyMildew"
+    },
+    {
+      "crop": "Blackgram",
+      "label": "Blackgram Yellow Mosaic",
+      "slug": "blackgram_yellow_mosaic",
+      "path": "BCSS Dataset\\dataset\\blackgram_YellowMosaic"
+    },
+    {
+      "crop": "Soybean",
+      "label": "Soybean Leaf Disease",
+      "slug": "soybean_disease_soybean",
+      "path": "BCSS Dataset\\dataset\\Disease_soybean"
+    },
+    {
+      "crop": "Soybean",
+      "label": "Soybean Healthy Leaf",
+      "slug": "soybean_healthy",
+      "path": "BCSS Dataset\\dataset\\Healthy_soybean"
+    }
+  ],
+  "num_classes": 33
+}

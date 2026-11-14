@@ -1,0 +1,86 @@
+{
+  "total_classes": 9,
+  "classes": [
+    {
+      "id": 0,
+      "name": "Nitrogen Deficiency",
+      "symbol": "N",
+      "slug": "nitrogen_deficiency",
+      "description": "General uniform yellowing/chlorosis beginning on older foliage, stunted vegetative vigor.",
+      "fertilizer": "Urea (46-0-0) 2% foliar spray or Calcium Ammonium Nitrate (CAN) 40 kg/acre.",
+      "organic": "Enriched vermicompost (2 tons/acre) and liquid jeevamrutha foliar drench."
+    },
+    {
+      "id": 1,
+      "name": "Phosphorus Deficiency",
+      "symbol": "P",
+      "slug": "phosphorus_deficiency",
+      "description": "Foliage turns abnormally dark green with bronze/purple discoloration, delayed flowering.",
+      "fertilizer": "Single Super Phosphate (SSP 16%) 50 kg/acre or DAP (18-46-0) at root zone.",
+      "organic": "Rock phosphate combined with phosphate solubilizing bacteria (PSB 2 kg/acre)."
+    },
+    {
+      "id": 2,
+      "name": "Potassium Deficiency",
+      "symbol": "K",
+      "slug": "potassium_deficiency",
+      "description": "Marginal chlorosis leading to scorch and necrosis along leaf margins, upward curling.",
+      "fertilizer": "Sulphate of Potash (SOP 0-0-50) 10 g/L foliar spray or Muriate of Potash (MOP 0-0-60).",
+      "organic": "Wood ash (100 kg/acre) or composted banana waste and potassium mobilizer (KMB)."
+    },
+    {
+      "id": 3,
+      "name": "Magnesium Deficiency",
+      "symbol": "Mg",
+      "slug": "magnesium_deficiency",
+      "description": "Distinct interveinal chlorosis on lower mature leaves, veins remain strikingly green.",
+      "fertilizer": "Magnesium Sulphate (Epsom salt, MgSO4) 5 g/L foliar spray applied twice at 10-day intervals.",
+      "organic": "Dolomite lime application (150 kg/acre) during field preparation."
+    },
+    {
+      "id": 4,
+      "name": "Iron Deficiency",
+      "symbol": "Fe",
+      "slug": "iron_deficiency",
+      "description": "Interveinal chlorosis on youngest terminal leaves; leaf tissue bleaches to ivory/yellow.",
+      "fertilizer": "Chelated Iron (Fe-EDTA 12%) 1.0-1.5 g/L foliar spray early morning.",
+      "organic": "Fermented compost tea enriched with organic iron humate."
+    },
+    {
+      "id": 5,
+      "name": "Zinc Deficiency",
+      "symbol": "Zn",
+      "slug": "zinc_deficiency",
+      "description": "Little leaf / rosette symptom, shortening of internodes, mottled interveinal chlorosis.",
+      "fertilizer": "Zinc Sulphate Heptahydrate (ZnSO4 21%) 5 g/L neutralized with 2.5 g/L lime.",
+      "organic": "Zinc solubilizing biofertilizer (ZSB) seed treatment and zinc-enriched farmyard manure."
+    },
+    {
+      "id": 6,
+      "name": "Calcium Deficiency",
+      "symbol": "Ca",
+      "slug": "calcium_deficiency",
+      "description": "Deformed young leaves, hooked leaf tips, blossom end necrosis on fruiting vegetables.",
+      "fertilizer": "Calcium Nitrate (Ca(NO3)2) 5 g/L foliar spray during vegetative and flowering stage.",
+      "organic": "Crushed agricultural gypsum or bone meal powder."
+    },
+    {
+      "id": 7,
+      "name": "Boron Deficiency",
+      "symbol": "B",
+      "slug": "boron_deficiency",
+      "description": "Thick, brittle foliage, curling downward, death of apical growing points.",
+      "fertilizer": "Solubor / Borax (20% B) 1.0 g/L foliar spray.",
+      "organic": "Composted poultry manure with organic boron amendments."
+    },
+    {
+      "id": 8,
+      "name": "Healthy Foliage (Balanced Nutrients)",
+      "symbol": "Healthy",
+      "slug": "healthy_nutrients",
+      "description": "Uniform green pigmentation, balanced leaf expansion, optimal cell wall integrity.",
+      "fertilizer": "Standard maintenance balanced NPK (19-19-19) 3 g/L.",
+      "organic": "Maintain regular vermicompost and microbial consortia maintenance."
+    }
+  ]
+}

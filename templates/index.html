@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoilDoctor — AI-Powered Crop & Soil Health Assistant</title>
+  
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Leaflet CSS for Farm Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css?v=scan-area-required-3" />
+</head>
+<body>
+
+  <!-- MOBILE FRAME WRAPPER (Can be toggled as standard desktop or simulated mobile) -->
+  <div id="app-container" class="desktop-mode">
+
+    <!-- SIDEBAR NAVIGATION (Desktop) -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-brand" onclick="navigateTo('landing')">
+        <div class="brand-icon">🌱</div>
+        <div class="brand-text">
+          <span class="brand-name">SoilDoctor</span>
+          <span class="brand-badge">AI Assistant</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-menu">
+        <a href="javascript:void(0)" class="nav-item" data-view="dashboard" onclick="navigateTo('dashboard')">
+          <i class="fa-solid fa-table-cells-large"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="scan-options" onclick="navigateTo('scan-options')">
+          <i class="fa-solid fa-camera"></i>
+          <span>Scan Crop / Soil</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="crop-doctor" onclick="navigateTo('crop-doctor')">
+          <i class="fa-solid fa-seedling"></i>
+          <span>Crop Doctor</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="soil-health" onclick="navigateTo('soil-health')">
+          <i class="fa-solid fa-flask"></i>
+          <span>Soil Health</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="farm-mgmt" onclick="navigateTo('farm-mgmt')">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <span>My Farm</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="analytics" onclick="navigateTo('analytics')">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="history" onclick="navigateTo('history')">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <span>Scan History</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" data-view="report-view" onclick="navigateTo('report-view')">
+          <i class="fa-solid fa-file-waveform"></i>
+          <span>AI Reports</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="javascript:void(0)" class="nav-item" data-view="settings" onclick="navigateTo('settings')">
+          <i class="fa-solid fa-gear"></i>
+          <span>Settings</span>
+        </a>
+        <a href="javascript:void(0)" class="nav-item" onclick="navigateTo('landing')">
+          <i class="fa-solid fa-house"></i>
+          <span>Home / About</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN APP CONTENT AREA -->
+    <div class="main-wrapper">
+
+      <!-- TOP HEADER BAR -->
+      <header class="top-header">
+        <div class="header-left">
+          <button class="mobile-toggle-btn" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></button>
+          <!-- Global Back Button: shown when navigation history exists -->
+          <button id="global-back-btn" class="back-nav-btn" onclick="goBack()" style="display:none;" title="Go Back">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back</span>
+          </button>
+          <div class="header-title-box">
+            <h2 id="header-title">Good Morning, Farmer! 👋</h2>
+            <p id="header-subtitle">Let's check your crops today.</p>
+          </div>
+        </div>
+
+        <div class="top-telemetry-strip hide-mobile">
+          <div class="telemetry-pill">
+            <i class="fa-solid fa-leaf text-green"></i>
+            <span>Soil Health: <strong id="top-soil-health-pct">94%</strong></span>
+            <div class="telemetry-micro-bar"><div class="micro-fill" style="width:94%;"></div></div>
+          </div>
+          <div class="telemetry-pill">
+            <i class="fa-solid fa-shield-virus text-emerald"></i>
+            <span>AI Pathology: <strong class="text-green">Dual-Model v3.2 Active</strong></span>
+            <span class="telemetry-pulse"></span>
+          </div>
+          <div class="telemetry-pill">
+            <i class="fa-solid fa-location-dot text-info"></i>
+            <span>Field: <strong>Zone B4 (Coimbatore)</strong></span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Toggle Visual Theme">
+            <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+          </button>
+
+          <button class="btn btn-primary btn-new-scan" onclick="navigateTo('scan-options')">
+            <i class="fa-solid fa-camera-rotate"></i>
+            <span>New Scan</span>
+          </button>
+
+          <div class="user-profile-badge" onclick="navigateTo('settings')">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Avatar" class="user-avatar" id="header-avatar" />
+            <div class="user-info hide-mobile">
+              <span class="user-name" id="header-username">Ramesh Kumar</span>
+              <span class="user-role">Farmer (Coimbatore)</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- VIEW CONTAINER (Swapped via JS router) -->
+      <main id="view-content" class="content-body">
+
+        <!-- ============================================== -->
+        <!-- 1. LANDING PAGE VIEW -->
+        <!-- ============================================== -->
+        <section id="view-landing" class="app-view">
+          <div class="landing-hero">
+            <div class="hero-content">
+              <div class="hero-tag"><i class="fa-solid fa-microchip"></i> Next-Gen Agri-Tech AIML Platform</div>
+              <h1 class="hero-title">Understand Your Crop <span class="text-gradient">Before It Becomes a Problem.</span></h1>
+              <p class="hero-desc">
+                SoilDoctor uses state-of-the-art Computer Vision and Explainable AI (Grad-CAM) to analyze plant foliage and soil images, identify fungal pathogens, nutrient deficiencies, and deliver laboratory-grade recommendations.
+              </p>
+              <div class="hero-actions">
+                <button class="btn btn-primary btn-lg" onclick="navigateTo('scan-options')">
+                  <i class="fa-solid fa-camera"></i> Analyze My Crop
+                </button>
+                <button class="btn btn-outline btn-lg" onclick="navigateTo('dashboard')">
+                  <i class="fa-solid fa-gauge-high"></i> Explore Dashboard
+                </button>
+              </div>
+
+              <div class="hero-features-row">
+                <div class="feature-pill"><i class="fa-solid fa-shield-virus"></i> Detect Diseases</div>
+                <div class="feature-pill"><i class="fa-solid fa-mountain-sun"></i> Soil Vision</div>
+                <div class="feature-pill"><i class="fa-solid fa-seedling"></i> Nutrient Insights</div>
+                <div class="feature-pill"><i class="fa-solid fa-robot"></i> Smart Recommendations</div>
+              </div>
+            </div>
+
+            <div class="hero-visual">
+              <div class="plant-hud-card">
+                <img src="/static/samples/tomato_early_blight.jpg" alt="Plant Inspection" class="hud-plant-img" />
+                <div class="hud-pin pin-1" title="Healthy Leaf Area">
+                  <div class="pin-dot"></div>
+                  <div class="pin-tooltip">Healthy Foliage (95%)</div>
+                </div>
+                <div class="hud-pin pin-2" title="Early Blight Lesion">
+                  <div class="pin-dot alert-dot"></div>
+                  <div class="pin-tooltip alert-tip">Early Blight Lesion (92%)</div>
+                </div>
+                <div class="hud-pin pin-3" title="Chlorotic Halo">
+                  <div class="pin-dot warn-dot"></div>
+                  <div class="pin-tooltip warn-tip">Chlorotic Halo Detected</div>
+                </div>
+                <div class="hud-badge">
+                  <span class="live-pulse"></span> OpenCV AI Vision Active
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards Grid -->
+          <div class="landing-grid">
+            <div class="l-card">
+              <div class="l-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h3>OpenCV Feature Pipeline</h3>
+              <p>Automated CLAHE contrast enhancement, HSV vegetation segmentation, contour boundary tracing, and texture irregularity extraction.</p>
+            </div>
+            <div class="l-card">
+              <div class="l-icon"><i class="fa-solid fa-fire"></i></div>
+              <h3>Explainable AI (Grad-CAM)</h3>
+              <p>Transparent diagnosis. SoilDoctor renders full activation heatmaps pinpointing the exact disease spots influencing the decision.</p>
+            </div>
+            <div class="l-card">
+              <div class="l-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+              <h3>Soil & Nutrient Engine</h3>
+              <p>Combines visual soil color/texture analysis with sensor NPK/pH readings to formulate organic and mineral fertilization plans.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 2. DASHBOARD VIEW (Panel 3) -->
+        <!-- ============================================== -->
+        <section id="view-dashboard" class="app-view active">
+          <!-- Live Data Indicator -->
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:16px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;background:#D1FAE5;color:#065F46;border-radius:999px;padding:5px 14px;font-size:12.5px;font-weight:600;">
+              <span style="width:8px;height:8px;background:#10B981;border-radius:50%;display:inline-block;animation:pulse-dot 1.5s infinite;"></span>
+              <span id="dash-live-time">Live · Auto-refreshes every 30s</span>
+            </span>
+          </div>
+          <!-- Metric KPI Cards -->
+          <div class="kpi-grid">
+
+            <div class="kpi-card kpi-card-clickable" role="button" tabindex="0" onclick="openDashboardDetail('plant')" onkeydown="activateDashboardCard(event, 'plant')" aria-label="Open latest crop scan">
+              <div class="kpi-header">
+                <span class="kpi-title">Crop Health</span>
+                <span class="kpi-icon-wrap bg-green-light"><i class="fa-solid fa-leaf text-green"></i></span>
+              </div>
+              <div class="kpi-val" id="kpi-crop-health">—</div>
+              <div class="kpi-meta" id="kpi-crop-health-meta"><i class="fa-solid fa-clock"></i> No scans yet</div>
+            </div>
+
+            <div class="kpi-card kpi-card-clickable" role="button" tabindex="0" onclick="openDashboardDetail('soil')" onkeydown="activateDashboardCard(event, 'soil')" aria-label="Open latest soil scan">
+              <div class="kpi-header">
+                <span class="kpi-title">Soil Health</span>
+                <span class="kpi-icon-wrap bg-teal-light"><i class="fa-solid fa-layer-group text-teal"></i></span>
+              </div>
+              <div class="kpi-val" id="kpi-soil-health">—</div>
+              <div class="kpi-meta" id="kpi-soil-health-meta"><i class="fa-solid fa-clock"></i> No scans yet</div>
+            </div>
+
+            <div class="kpi-card kpi-card-clickable" role="button" tabindex="0" onclick="openDashboardDetail('all')" onkeydown="activateDashboardCard(event, 'all')" aria-label="Open all scans">
+              <div class="kpi-header">
+                <span class="kpi-title">Total Scans</span>
+                <span class="kpi-icon-wrap bg-blue-light"><i class="fa-solid fa-qrcode text-blue"></i></span>
+              </div>
+              <div class="kpi-val" id="kpi-total-scans">0</div>
+              <div class="kpi-meta text-muted" id="kpi-total-scans-meta">Loading...</div>
+            </div>
+
+            <div class="kpi-card kpi-card-clickable" role="button" tabindex="0" onclick="openDashboardDetail('fields')" onkeydown="activateDashboardCard(event, 'fields')" aria-label="Open active fields and latest reports">
+              <div class="kpi-header">
+                <span class="kpi-title">Active Fields</span>
+                <span class="kpi-icon-wrap bg-orange-light"><i class="fa-solid fa-map-pin text-orange"></i></span>
+              </div>
+              <div class="kpi-val" id="kpi-active-fields">0</div>
+              <div class="kpi-meta text-accent">Open fields and latest reports &rarr;</div>
+            </div>
+          </div>
+
+          <!-- Main Dashboard Sections -->
+          <div class="dash-columns">
+            <!-- Left: Crop Health Overview -->
+            <div class="card dash-card">
+              <div class="card-header">
+                <h3>Crop Health Overview</h3>
+              <span class="badge badge-light" id="dash-crop-count-badge">Loading...</span>
+              </div>
+              <div class="crop-progress-list" id="dash-crop-health-list">
+                <div style="text-align:center; color:var(--text-muted); padding:24px 0; font-size:13px;">
+                  <i class="fa-solid fa-seedling" style="font-size:24px; margin-bottom:8px; display:block;"></i>
+                  No scans yet. Run your first crop scan to see health here.
+                </div>
+              </div>
+
+              <div class="dash-cta-banner" onclick="openCaptureFlow('plant')">
+                <i class="fa-solid fa-camera-rotate"></i>
+                <div class="dash-cta-text">
+                  <strong>Need to verify a suspicious leaf?</strong>
+                  <span>Upload a leaf from one of the six supported crops; choose its crop for best results.</span>
+                </div>
+                <button class="btn btn-sm btn-primary">Scan Now</button>
+              </div>
+
+              <!-- QUICK UPLOAD BUTTON ON DASHBOARD -->
+              <div class="dash-upload-shortcut mt-3">
+                <label for="dash-quick-upload" class="dash-upload-label">
+                  <i class="fa-solid fa-cloud-arrow-up"></i>
+                  <div>
+                    <strong>Upload a Leaf Photo</strong>
+                    <span>Instantly detect diseases &amp; get treatment advice</span>
+                  </div>
+                  <span class="upload-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </label>
+                <input type="file" id="dash-quick-upload" accept="image/*" style="display:none;" onchange="handleDashQuickUpload(event)" />
+              </div>
+            </div>
+
+            <!-- Right: Recent Scans -->
+            <div class="card dash-card">
+              <div class="card-header">
+                <h3>Recent Scans</h3>
+                <a href="javascript:void(0)" class="card-link" onclick="navigateTo('history')">View All</a>
+              </div>
+              <div class="recent-scans-list" id="dash-recent-scans">
+                <!-- Dynamically populated or default fallback -->
+                <div class="recent-scan-item" onclick="openDemoResult('tomato')">
+                  <div class="scan-thumb-wrap">
+                    <img src="/static/samples/tomato_early_blight.jpg" alt="Tomato Leaf" />
+                  </div>
+                  <div class="scan-meta">
+                    <div class="scan-crop-line">
+                      <strong>Tomato</strong>
+                      <span class="scan-time">Today</span>
+                    </div>
+                    <span class="badge badge-danger">Tomato Early Blight (93%)</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-muted"></i>
+                </div>
+
+                <div class="recent-scan-item" onclick="openDemoResult('rice')">
+                  <div class="scan-thumb-wrap">
+                    <img src="/static/samples/rice_healthy.jpg" alt="Rice Leaf" />
+                  </div>
+                  <div class="scan-meta">
+                    <div class="scan-crop-line">
+                      <strong>Rice</strong>
+                      <span class="scan-time">Yesterday</span>
+                    </div>
+                    <span class="badge badge-success">Healthy Rice Leaf (96%)</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-muted"></i>
+                </div>
+
+                <div class="recent-scan-item" onclick="openDemoResult('chilli')">
+                  <div class="scan-thumb-wrap">
+                    <img src="/static/samples/chilli_demo.jpg" alt="Chilli Leaf" />
+                  </div>
+                  <div class="scan-meta">
+                    <div class="scan-crop-line">
+                      <strong>Chilli</strong>
+                      <span class="scan-time">2 days ago</span>
+                    </div>
+                    <span class="badge badge-warning">Cercospora / Mites (89%)</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-muted"></i>
+                </div>
+
+                <div class="recent-scan-item" onclick="openDemoResult('sugarcane')">
+                  <div class="scan-thumb-wrap">
+                    <img src="/static/samples/sugarcane_demo.jpg" alt="Sugarcane Leaf" />
+                  </div>
+                  <div class="scan-meta">
+                    <div class="scan-crop-line">
+                      <strong>Sugarcane</strong>
+                      <span class="scan-time">3 days ago</span>
+                    </div>
+                    <span class="badge badge-danger">Red Rot / Mosaic (91%)</span>
+                  </div>
+                  <i class="fa-solid fa-chevron-right text-muted"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 3. SCAN OPTIONS (Panel 4) -->
+        <!-- ============================================== -->
+        <section id="view-scan-options" class="app-view">
+          <div class="section-center-head">
+            <h2>What would you like to analyze?</h2>
+            <p>Select your target specimen to load the specialized computer vision pipeline.</p>
+          </div>
+
+          <div class="scan-options-grid">
+            <!-- Option 1: Plant / Leaf — healthy mixed leaves collage -->
+            <div class="scan-option-card" onclick="openCaptureFlow('plant')">
+              <div class="scan-opt-img-wrap healthy-collage-wrap">
+                <div class="healthy-leaf-grid">
+                  <img src="/static/samples/real/tomato_healthy_1.jpg" alt="Tomato Healthy" />
+                  <img src="/static/samples/real/rice_healthy_3.jpg" alt="Rice Healthy" />
+                  <img src="/static/samples/real/chilli_healthy_1.jpg" alt="Chilli Healthy" />
+                  <img src="/static/samples/real/soybean_healthy_1.jpg" alt="Soybean Healthy" />
+                </div>
+                <span class="opt-badge"><i class="fa-solid fa-leaf"></i> Plant Vision</span>
+              </div>
+              <div class="scan-opt-content">
+                <h3>🌿 Plant / Leaf Analysis</h3>
+                <p>Upload a leaf from Tomato, Rice, Chilli, Sugarcane, Blackgram, or Soybean. Choose the crop before scanning for the most reliable disease result; other crops are not supported yet.</p>
+                <button class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Upload Leaf Photo
+                </button>
+              </div>
+            </div>
+
+            <!-- Option 2: Soil -->
+            <div class="scan-option-card" onclick="openCaptureFlow('soil')">
+              <div class="scan-opt-img-wrap">
+                <img src="/static/samples/loamy_soil.jpg" alt="Soil" />
+                <span class="opt-badge bg-brown"><i class="fa-solid fa-flask"></i> Soil Vision</span>
+              </div>
+              <div class="scan-opt-content">
+                <h3>Soil</h3>
+                <p>View soil color and surface texture. Enter lab or sensor readings to assess NPK, pH, and moisture; a photo cannot measure those values.</p>
+                <button class="btn btn-secondary btn-block">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Upload / Scan Soil Photo
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tips Banner -->
+          <div class="card tips-card">
+            <h4><i class="fa-solid fa-lightbulb text-warning"></i> Tips for Better Computer Vision Accuracy</h4>
+            <div class="tips-row">
+              <div class="tip-item"><i class="fa-solid fa-sun"></i> Good lighting</div>
+              <div class="tip-item"><i class="fa-solid fa-hand"></i> Keep camera steady</div>
+              <div class="tip-item"><i class="fa-solid fa-crosshairs"></i> Focus on leaf or soil</div>
+              <div class="tip-item"><i class="fa-solid fa-expand"></i> Keep whole leaf in frame</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 4. CAPTURE / UPLOAD VIEW (Panel 5) -->
+        <!-- ============================================== -->
+        <section id="view-capture" class="app-view">
+          <div class="capture-layout">
+            <div class="capture-main">
+
+              <!-- PROMINENT UPLOAD HERO SECTION -->
+              <div class="upload-hero-section">
+                <label for="file-input-hero" class="upload-hero-label">
+                  <div class="upload-hero-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <div class="upload-hero-text">
+                    <strong id="upload-hero-title">Upload a Leaf Photo</strong>
+                    <span id="upload-hero-subtitle">Tap here to choose from your gallery or files</span>
+                  </div>
+                </label>
+                <input type="file" id="file-input-hero" accept="image/*" style="display:none;" onchange="handleFileSelect(event)" />
+              </div>
+
+              <!-- Dual Capture Tabs (Upload first, Camera second) -->
+              <div class="tab-pill-group dual-mode-tabs">
+                <button class="tab-pill active" id="tab-upload" onclick="switchCaptureTab('upload')">
+                  <i class="fa-solid fa-cloud-arrow-up"></i> Upload Photo
+                </button>
+                <button class="tab-pill" id="tab-camera" onclick="switchCaptureTab('camera')">
+                  <i class="fa-solid fa-camera"></i> Live Camera
+                </button>
+              </div>
+
+              <!-- Viewfinder Box (Camera Mode) -->
+              <div id="camera-viewfinder" class="viewfinder-container">
+                <video id="webcam-feed" autoplay playsinline muted></video>
+                <canvas id="capture-canvas" style="display:none;"></canvas>
+
+                <!-- Top Camera Quick Controls -->
+                <div class="camera-top-bar">
+                  <button class="cam-top-btn" id="camera-flip-btn" onclick="flipCamera()" title="Switch Front/Back Camera">
+                    <i class="fa-solid fa-camera-rotate"></i> <span>Flip Camera</span>
+                  </button>
+                  <button class="cam-top-btn" onclick="triggerMobileCamera()" title="Use Native Phone Camera App">
+                    <i class="fa-solid fa-mobile-screen-button"></i> <span>Phone Cam</span>
+                  </button>
+                  <input type="file" id="mobile-camera-input" accept="image/*" capture="environment" style="display:none;" onchange="handleFileSelect(event)" />
+                </div>
+
+                <!-- Reticle Guides -->
+                <div class="reticle-box">
+                  <span class="corner top-left"></span>
+                  <span class="corner top-right"></span>
+                  <span class="corner bottom-left"></span>
+                  <span class="corner bottom-right"></span>
+                  <div class="scan-laser"></div>
+                  <span class="reticle-prompt" id="reticle-prompt-text">Position leaf inside reticle frame</span>
+                </div>
+
+                <!-- Shutter Trigger -->
+                <div class="camera-controls">
+                  <button class="shutter-btn" id="shutter-trigger" onclick="captureFromWebcam()" title="Capture Photo">
+                    <span class="shutter-inner"></span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Snapshot Confirmation Card (After photo captured) -->
+              <div id="camera-snapshot-confirm" class="snapshot-confirm-card" style="display:none;">
+                <div class="snapshot-card-head">
+                  <h4><i class="fa-solid fa-camera"></i> Photo Captured</h4>
+                  <span class="badge badge-success"><i class="fa-solid fa-check"></i> High Resolution</span>
+                </div>
+                <div class="snapshot-img-frame">
+                  <img id="snapshot-preview-img" src="" alt="Captured Specimen" />
+                </div>
+                <div class="snapshot-actions">
+                  <button class="btn btn-outline" onclick="retakePhoto()">
+                    <i class="fa-solid fa-rotate-left"></i> Retake Photo
+                  </button>
+                  <button class="btn btn-primary" onclick="confirmSnapshot()">
+                    <i class="fa-solid fa-bolt"></i> Analyze This Photo
+                  </button>
+                </div>
+              </div>
+
+              <!-- Drag and Drop Box (Upload Mode) -->
+              <div id="upload-zone" class="upload-dropzone" style="display:none;" onclick="triggerFileInput()">
+                <input type="file" id="file-input" accept="image/*" style="display:none;" onchange="handleFileSelect(event)" />
+                <div class="dropzone-content">
+                  <i class="fa-solid fa-cloud-arrow-up drop-icon"></i>
+                  <h3 id="upload-zone-title">Drag & Drop Leaf or Soil Image Here</h3>
+                  <p id="upload-zone-help">Supports JPG, JPEG, PNG, WEBP (Direct from phone or computer)</p>
+                  <button type="button" class="btn btn-primary btn-sm mt-2">
+                    <i class="fa-solid fa-folder-open"></i> Browse Files from Device
+                  </button>
+                </div>
+              </div>
+
+              <!-- Uploaded File Preview Card -->
+              <div id="upload-preview-card" class="upload-preview-container card" style="display:none;">
+                <div class="upload-preview-head">
+                  <h4><i class="fa-solid fa-file-image text-green"></i> <span id="upload-preview-title">Image Ready for Analysis</span></h4>
+                  <button class="btn btn-sm btn-link text-danger" onclick="clearSelectedUpload()">Clear</button>
+                </div>
+                <div class="upload-preview-body">
+                  <div class="upload-thumb-wrap">
+                    <img id="upload-preview-img" src="" alt="Selected File" />
+                  </div>
+                  <div class="upload-file-details">
+                    <h4 id="upload-file-name">leaf_sample.jpg</h4>
+                    <span id="upload-file-size" class="text-muted">1.2 MB</span>
+
+                    <!-- Target Crop Selector for Uploaded Image -->
+                    <div class="upload-crop-selector-box mt-3" id="upload-crop-selector-box">
+                      <label class="font-bold mb-1 block" style="font-size:0.85rem; color:#cbd5e1;">
+                        <i class="fa-solid fa-seedling text-green"></i> Choose the crop shown in your photo (required):
+                      </label>
+                      <div class="crop-pill-selector" id="upload-crop-pills">
+                        <button type="button" class="crop-pill-btn" data-crop="Tomato" onclick="selectUploadCrop('Tomato')">🍅 Tomato</button>
+                        <button type="button" class="crop-pill-btn" data-crop="Rice" onclick="selectUploadCrop('Rice')">🌾 Rice</button>
+                        <button type="button" class="crop-pill-btn" data-crop="Chilli" onclick="selectUploadCrop('Chilli')">🌶️ Chilli</button>
+                        <button type="button" class="crop-pill-btn" data-crop="Sugarcane" onclick="selectUploadCrop('Sugarcane')">🎋 Sugarcane</button>
+                        <button type="button" class="crop-pill-btn" data-crop="Blackgram" onclick="selectUploadCrop('Blackgram')">🌱 Blackgram</button>
+                        <button type="button" class="crop-pill-btn" data-crop="Soybean" onclick="selectUploadCrop('Soybean')">🌿 Soybean</button>
+                      </div>
+                    </div>
+
+                    <div class="upload-preview-actions mt-3">
+                      <button class="btn btn-primary btn-block" id="analyze-upload-btn" onclick="analyzeSelectedUpload()">
+                        <i class="fa-solid fa-microchip"></i> Run AI Diagnosis Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="soil-capture-sensor-panel" class="card mt-3" style="display:none; padding:16px;">
+                <div class="card-header" style="padding:0 0 10px;">
+                  <h3><i class="fa-solid fa-microchip text-teal"></i> Soil sensor values</h3>
+                  <span class="badge badge-warning">Project demo</span>
+                </div>
+                <label style="display:flex; gap:8px; align-items:center; margin:8px 0;">
+                  <input type="checkbox" id="soil-demo-sensor-toggle" checked onchange="updateScanSelectionSummary()" />
+                  Use simulated sensor readings
+                </label>
+                <small class="text-muted">These example values demonstrate sensor integration. They are simulated, not measured from your photo or a physical sensor.</small>
+                <div class="form-grid-3 mt-3">
+                  <label class="form-group">pH <input class="form-control" type="number" id="soil-capture-ph" min="0" max="14" step="0.1" value="6.4" oninput="updateScanSelectionSummary()" /></label>
+                  <label class="form-group">Nitrogen (N)
+                    <select class="form-select" id="soil-capture-n" onchange="updateScanSelectionSummary()"><option>Low</option><option selected>Normal</option><option>High</option></select>
+                  </label>
+                  <label class="form-group">Phosphorus (P)
+                    <select class="form-select" id="soil-capture-p" onchange="updateScanSelectionSummary()"><option>Low</option><option selected>Normal</option><option>High</option></select>
+                  </label>
+                  <label class="form-group">Potassium (K)
+                    <select class="form-select" id="soil-capture-k" onchange="updateScanSelectionSummary()"><option>Low</option><option selected>Normal</option><option>High</option></select>
+                  </label>
+                  <label class="form-group">Moisture (%) <input class="form-control" type="number" id="soil-capture-moisture" min="0" max="100" value="28" oninput="updateScanSelectionSummary()" /></label>
+                </div>
+              </div>
+
+              <!-- 1-Click Instant Real Dataset Presets -->
+              <div class="preset-selector-box mt-4">
+                <div class="preset-header-row">
+                  <span class="preset-label"><i class="fa-solid fa-bolt text-warning"></i> Real Dataset Test Presets (Instant 1-Click):</span>
+                  <a href="javascript:void(0)" class="card-link" onclick="toggleDatasetGallery()">
+                    <i class="fa-solid fa-images"></i> Browse All 33 Classes &rarr;
+                  </a>
+                </div>
+                <div class="preset-buttons">
+                  <button class="preset-btn" onclick="runSampleScan('tomato_healthy_1.jpg', 'Tomato')">
+                    <img src="/static/samples/real/tomato_healthy_1.jpg" alt="Tomato Healthy" />
+                    <span>🍅 Tomato (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSampleScan('rice_healthy_3.jpg', 'Rice')">
+                    <img src="/static/samples/real/rice_healthy_3.jpg" alt="Rice Healthy" />
+                    <span>🌾 Rice (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSampleScan('chilli_healthy_1.jpg', 'Chilli')">
+                    <img src="/static/samples/real/chilli_healthy_1.jpg" alt="Chilli Healthy" />
+                    <span>🌶️ Chilli (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSampleScan('sugarcane_healthy_1.jpeg', 'Sugarcane')">
+                    <img src="/static/samples/real/sugarcane_healthy_1.jpeg" alt="Sugarcane Healthy" />
+                    <span>🎋 Sugarcane (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSampleScan('blackgram_healthy_1.jpg', 'Blackgram')">
+                    <img src="/static/samples/real/blackgram_healthy_1.jpg" alt="Blackgram Healthy" />
+                    <span>🌱 Blackgram (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSampleScan('soybean_healthy_1.jpg', 'Soybean')">
+                    <img src="/static/samples/real/soybean_healthy_1.jpg" alt="Soybean Healthy" />
+                    <span>🌿 Soybean (Healthy)</span>
+                  </button>
+                  <button class="preset-btn" onclick="runSoilScanSample()">
+                    <img src="/static/samples/loamy_soil.jpg" alt="Loamy Soil" />
+                    <span>🌍 Loamy Farm Soil</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Interactive Real Dataset Explorer (Accordion/Expandable) -->
+              <div id="dataset-gallery-box" class="card dataset-gallery-card mt-4" style="display:none;">
+                <div class="card-header">
+                  <div>
+                    <h3><i class="fa-solid fa-database text-green"></i> Dataset New — Real Leaf Gallery</h3>
+                    <p class="text-muted" style="margin:0; font-size:0.85rem;">Click any real image from the dataset to test with Explainable AI Grad-CAM.</p>
+                  </div>
+                  <div class="gallery-crop-filters" id="gallery-crop-filters">
+                    <button class="filter-pill active" onclick="filterGalleryByCrop('all')">All</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Tomato')">Tomato</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Rice')">Rice</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Chilli')">Chilli</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Sugarcane')">Sugarcane</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Blackgram')">Blackgram</button>
+                    <button class="filter-pill" onclick="filterGalleryByCrop('Soybean')">Soybean</button>
+                  </div>
+                </div>
+                <div class="dataset-gallery-grid" id="dataset-gallery-grid">
+                  <!-- Populated dynamically via JS from /api/dataset/samples -->
+                  <div class="gallery-loading"><i class="fa-solid fa-spinner fa-spin"></i> Loading real dataset images...</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Sidebar: Image Capture Guidelines & Crop Selection -->
+            <div class="capture-sidebar card">
+              <div class="sample-target-preview mb-3">
+                <label class="target-title font-bold mb-2 block"><i class="fa-solid fa-location-dot text-green"></i> Scan area (required):</label>
+                <select id="scan-field-select" class="form-select" onchange="selectScanField(this.value)">
+                  <option value="">Choose a saved field…</option>
+                </select>
+                <small class="text-muted" id="scan-location-status">Select a saved field to see its acreage and crop. A field is required before scanning.</small>
+                <div id="scan-selection-summary" class="scan-selection-summary" role="status" aria-live="polite">Choose a saved field to unlock the scan.</div>
+                <button type="button" class="btn btn-sm btn-outline mt-2" onclick="useCurrentScanLocation()" id="scan-live-location-btn">
+                  <i class="fa-solid fa-location-crosshairs"></i> Add live GPS point to selected field
+                </button>
+              </div>
+              <div class="sample-target-preview mb-3">
+                <label class="target-title font-bold mb-2 block"><i class="fa-solid fa-seedling text-green"></i> Target Crop (required for leaf scans):</label>
+                <select id="scan-crop-select" class="form-select" onchange="onTargetCropChanged(this.value)">
+                  <option value="" selected disabled>Choose crop from the photo…</option>
+                  <option value="Rice">🌾 Rice / Paddy (Oryza sativa)</option>
+                  <option value="Chilli">🌶️ Chilli / Pepper (Capsicum annuum)</option>
+                  <option value="Tomato">🍅 Tomato (Solanum lycopersicum)</option>
+                  <option value="Sugarcane">🎋 Sugarcane (Saccharum officinarum)</option>
+                  <option value="Blackgram">🌱 Blackgram / Urad (Vigna mungo)</option>
+                  <option value="Soybean">🌿 Soybean (Glycine max)</option>
+                </select>
+                <small class="text-muted">For best results, choose the crop you uploaded (for example, Tomato). The disease model is trained for these six crops only; other plants may be misidentified.</small>
+              </div>
+
+              <h3>Image Quality Tips</h3>
+              <ul class="tips-checklist">
+                <li><i class="fa-solid fa-circle-check text-green"></i> Good natural lighting (indirect sunlight)</li>
+                <li><i class="fa-solid fa-circle-check text-green"></i> Keep steady to avoid camera shake</li>
+                <li><i class="fa-solid fa-circle-check text-green"></i> Focus on lesions, veins, or leaf discoloration</li>
+                <li><i class="fa-solid fa-circle-check text-green"></i> Keep whole leaf in reticle frame</li>
+                <li><i class="fa-solid fa-circle-xmark text-danger"></i> Avoid dark backgrounds or heavy shadows</li>
+              </ul>
+
+              <div class="capture-specimen-badge mt-3">
+                <span class="badge badge-primary"><i class="fa-solid fa-shield-virus"></i> Real-Time Specimen Guard Active</span>
+                <p class="text-muted mt-1" style="font-size:0.75rem;">Protects against non-crop objects (humans, electronics, pets) before diagnosis.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 5. AI PROCESSING SCREEN (Panel 6) -->
+        <!-- ============================================== -->
+        <section id="view-processing" class="app-view">
+          <div class="processing-card card">
+            <!-- Top Nav Bar with Back Button -->
+            <div class="proc-top-bar">
+              <button class="btn btn-sm btn-outline" onclick="cancelProcessing()"><i class="fa-solid fa-arrow-left"></i> Cancel / Back</button>
+              <span class="badge badge-primary" id="proc-crop-badge"><i class="fa-solid fa-leaf"></i> Crop: Foliage</span>
+            </div>
+
+            <div class="proc-header">
+              <div class="proc-spinner" id="proc-main-spinner"></div>
+              <h2 id="proc-header-title">Analyzing your crop with AI...</h2>
+              <p id="proc-header-desc">Computer Vision & PyTorch MobileNetV3 pipeline inspecting the specimen.</p>
+              <div class="proc-active-task" id="proc-task-pill">
+                <i class="fa-solid fa-gear fa-spin"></i>
+                <span id="proc-task-name">Stage 1: Ingesting & validating specimen image...</span>
+              </div>
+            </div>
+
+            <!-- 6-Stage Animated Stepper Pipeline -->
+            <div class="proc-stepper">
+              <div class="proc-step active" id="p-step-1">
+                <div class="step-circle"><i class="fa-solid fa-image"></i></div>
+                <span class="step-name">1. Image Ingestion</span>
+              </div>
+              <div class="proc-step" id="p-step-2">
+                <div class="step-circle"><i class="fa-solid fa-sliders"></i></div>
+                <span class="step-name">2. Preprocessing</span>
+              </div>
+              <div class="proc-step" id="p-step-3">
+                <div class="step-circle"><i class="fa-solid fa-leaf"></i></div>
+                <span class="step-name">3. Leaf Segmentation</span>
+              </div>
+              <div class="proc-step" id="p-step-4">
+                <div class="step-circle"><i class="fa-solid fa-microscope"></i></div>
+                <span class="step-name">4. Feature Extraction</span>
+              </div>
+              <div class="proc-step" id="p-step-5">
+                <div class="step-circle"><i class="fa-solid fa-network-wired"></i></div>
+                <span class="step-name">5. CNN Inference</span>
+              </div>
+              <div class="proc-step" id="p-step-6">
+                <div class="step-circle"><i class="fa-solid fa-square-poll-vertical"></i></div>
+                <span class="step-name">6. Diagnostic Report</span>
+              </div>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="proc-progress-wrapper">
+              <div class="prog-bar-track">
+                <div class="prog-bar-fill bg-green" id="proc-progress-bar" style="width: 15%;"></div>
+              </div>
+              <span class="proc-pct-text" id="proc-progress-pct">15%</span>
+            </div>
+
+            <!-- Live Stage Visual Preview Tiles -->
+            <div class="proc-preview-tiles">
+              <!-- Tile 1: Original Input -->
+              <div class="proc-tile" id="proc-tile-1">
+                <span class="tile-label"><i class="fa-solid fa-camera"></i> 1. Original Input</span>
+                <div class="tile-img-wrap">
+                  <img id="tile-img-orig" src="" alt="Original Input" style="display:none;" />
+                  <div class="tile-placeholder" id="tile-orig-placeholder"><i class="fa-solid fa-image"></i><span>Loading image...</span></div>
+                </div>
+                <span class="tile-status-badge badge badge-neutral" id="tile-status-1">Input Received</span>
+              </div>
+
+              <!-- Tile 2: CLAHE / Denoised -->
+              <div class="proc-tile" id="proc-tile-2">
+                <span class="tile-label"><i class="fa-solid fa-sliders"></i> 2. CLAHE / Denoised</span>
+                <div class="tile-img-wrap">
+                  <img id="tile-img-preproc" src="" alt="CLAHE / Denoised" style="display:none;" />
+                  <div class="tile-placeholder" id="tile-preproc-box"><i class="fa-solid fa-gear fa-spin"></i><span>Filtering...</span></div>
+                </div>
+                <span class="tile-status-badge badge badge-neutral" id="tile-status-2">Waiting...</span>
+              </div>
+
+              <!-- Tile 3: Segmented Leaf -->
+              <div class="proc-tile" id="proc-tile-3">
+                <span class="tile-label"><i class="fa-solid fa-leaf"></i> 3. Segmented Leaf</span>
+                <div class="tile-img-wrap">
+                  <img id="tile-img-seg" src="" alt="Segmented Leaf" style="display:none;" />
+                  <div class="tile-placeholder" id="tile-seg-box"><i class="fa-solid fa-gear fa-spin"></i><span>Segmenting...</span></div>
+                </div>
+                <span class="tile-status-badge badge badge-neutral" id="tile-status-3">Waiting...</span>
+              </div>
+
+              <!-- Tile 4: Grad-CAM Heatmap -->
+              <div class="proc-tile" id="proc-tile-4">
+                <span class="tile-label"><i class="fa-solid fa-network-wired"></i> 4. Grad-CAM Heatmap</span>
+                <div class="tile-img-wrap">
+                  <img id="tile-img-gradcam" src="" alt="Grad-CAM Heatmap" style="display:none;" />
+                  <div class="tile-placeholder" id="tile-gradcam-box"><i class="fa-solid fa-gear fa-spin"></i><span>Deep CNN...</span></div>
+                </div>
+                <span class="tile-status-badge badge badge-neutral" id="tile-status-4">Waiting...</span>
+              </div>
+            </div>
+
+            <!-- Real-time Live Terminal Console -->
+            <div class="proc-console-card">
+              <div class="proc-console-header">
+                <div class="console-dots"><span></span><span></span><span></span></div>
+                <span class="console-title"><i class="fa-solid fa-terminal"></i> Computer Vision & PyTorch Inference Stream</span>
+                <span class="console-live-badge"><i class="fa-solid fa-circle text-green"></i> LIVE PIPELINE</span>
+              </div>
+              <div class="proc-console-body" id="proc-console-log">
+                <!-- Log lines injected in real-time -->
+              </div>
+            </div>
+
+            <!-- Completion Banner -->
+            <div id="proc-completion-card" class="proc-completion-box" style="display: none;">
+              <div class="proc-completion-info">
+                <i class="fa-solid fa-circle-check text-green fa-2x"></i>
+                <div>
+                  <h4 id="proc-diag-title">Diagnosis Complete</h4>
+                  <p id="proc-diag-subtitle">PyTorch CNN & OpenCV Morphological features extracted successfully.</p>
+                </div>
+              </div>
+              <div class="proc-completion-actions">
+                <button id="btn-view-pipeline-results" class="btn btn-primary" onclick="proceedToResults()">
+                  <span>View Full Diagnosis Report</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <span class="auto-proceed-timer" id="proc-auto-timer">Auto-opening in 3s...</span>
+              </div>
+            </div>
+
+            <!-- Error / Rejection Banner -->
+            <div id="proc-error-card" class="proc-error-box" style="display: none;">
+              <div class="proc-error-info">
+                <i class="fa-solid fa-triangle-exclamation text-danger fa-2x"></i>
+                <div>
+                  <h4 id="proc-err-title">Specimen Verification Alert</h4>
+                  <p id="proc-err-desc">The uploaded image could not be verified as plant foliage.</p>
+                </div>
+              </div>
+              <button class="btn btn-outline" onclick="cancelProcessing()"><i class="fa-solid fa-rotate-left"></i> Try Another Leaf</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 6. COMPUTER VISION RESULTS VIEW (Panel 7) -->
+        <!-- ============================================== -->
+        <section id="view-cv-results" class="app-view">
+          <div class="section-nav-head">
+            <button class="btn btn-sm btn-outline" onclick="navigateTo('scan-options')">&larr; New Scan</button>
+            <div class="nav-breadcrumbs">
+              <span class="crumb active" onclick="navigateTo('cv-results')">1. CV Analysis</span> &rarr;
+              <span class="crumb" onclick="navigateTo('explainable-ai')">2. Explainable AI</span> &rarr;
+              <span class="crumb" onclick="navigateTo('disease-result')">3. Diagnosis</span> &rarr;
+              <span class="crumb" onclick="navigateTo('recommendations')">4. Treatment Plan</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="navigateTo('explainable-ai')">Next: Explainable AI &rarr;</button>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>Image Analysis Results (Computer Vision Pipeline)</h2>
+              <div class="header-badges">
+                <span class="badge badge-success" id="cv-specimen-badge"><i class="fa-solid fa-shield-check"></i> Specimen Verified: Plant Foliage</span>
+                <span class="badge badge-primary"><i class="fa-solid fa-check"></i> OpenCV Processed</span>
+              </div>
+            </div>
+
+            <!-- 3 Pipeline Output Cards -->
+            <div class="cv-triad-grid">
+              <div class="cv-triad-card">
+                <span class="triad-title">Original Image</span>
+                <div class="triad-img-box">
+                  <img id="cv-orig-img" src="/static/samples/tomato_early_blight.jpg" alt="Original" />
+                </div>
+              </div>
+
+              <div class="cv-triad-card">
+                <span class="triad-title">Preprocessed (Denoised & Enhanced)</span>
+                <div class="triad-img-box">
+                  <img id="cv-preproc-img" src="/static/samples/tomato_early_blight.jpg" alt="Preprocessed" />
+                </div>
+              </div>
+
+              <div class="cv-triad-card">
+                <span class="triad-title">Segmentation (Isolated Leaf Mask)</span>
+                <div class="triad-img-box bg-dark">
+                  <img id="cv-seg-img" src="/static/samples/tomato_early_blight.jpg" alt="Segmented" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature Extraction 3-Column Breakdown -->
+            <h3 class="mt-4">Extracted Morphological & Color Features</h3>
+            <div class="feature-metrics-grid">
+              <!-- Color Analysis -->
+              <div class="feat-card">
+                <h4><i class="fa-solid fa-palette text-green"></i> Color Analysis</h4>
+                <div class="feat-row">
+                  <span class="f-lbl">Dominant Color:</span>
+                  <strong class="f-val text-green" id="f-dom-color">Green</strong>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Mean RGB:</span>
+                  <span class="f-val font-mono" id="f-rgb">(34, 139, 34)</span>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Mean HSV:</span>
+                  <span class="f-val font-mono" id="f-hsv">(60, 85, 54)</span>
+                </div>
+              </div>
+
+              <!-- Shape Analysis -->
+              <div class="feat-card">
+                <h4><i class="fa-solid fa-shapes text-teal"></i> Shape Analysis</h4>
+                <div class="feat-row">
+                  <span class="f-lbl">Contour Area:</span>
+                  <span class="f-val font-mono" id="f-area">12,450 px</span>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Perimeter:</span>
+                  <span class="f-val font-mono" id="f-perimeter">980 px</span>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Aspect Ratio:</span>
+                  <span class="f-val font-mono" id="f-aspect">1.32</span>
+                </div>
+              </div>
+
+              <!-- Texture Analysis -->
+              <div class="feat-card">
+                <h4><i class="fa-solid fa-rug text-orange"></i> Texture Analysis</h4>
+                <div class="feat-row">
+                  <span class="f-lbl">Texture Surface:</span>
+                  <strong class="f-val text-orange" id="f-texture">Irregular</strong>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Lesion Spots:</span>
+                  <strong class="f-val text-danger" id="f-spots">Detected</strong>
+                </div>
+                <div class="feat-row">
+                  <span class="f-lbl">Affected Area:</span>
+                  <span class="f-val font-mono text-danger font-bold" id="f-affected-pct">16%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+              <button class="btn btn-primary" onclick="navigateTo('explainable-ai')">
+                View Explainable AI Attention Map (Grad-CAM) &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 7. EXPLAINABLE AI (Grad-CAM) VIEW (Panel 8) -->
+        <!-- ============================================== -->
+        <section id="view-explainable-ai" class="app-view">
+          <div class="section-nav-head">
+            <button class="btn btn-sm btn-outline" onclick="navigateTo('cv-results')">&larr; Back to CV Features</button>
+            <div class="nav-breadcrumbs">
+              <span class="crumb" onclick="navigateTo('cv-results')">1. CV Analysis</span> &rarr;
+              <span class="crumb active" onclick="navigateTo('explainable-ai')">2. Explainable AI</span> &rarr;
+              <span class="crumb" onclick="navigateTo('disease-result')">3. Diagnosis</span> &rarr;
+              <span class="crumb" onclick="navigateTo('recommendations')">4. Treatment Plan</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="navigateTo('disease-result')">Next: Diagnosis &rarr;</button>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h2>AI Attention Map (Grad-CAM Heatmap)</h2>
+              <span class="badge badge-primary"><i class="fa-solid fa-eye"></i> Transparent Deep Learning</span>
+            </div>
+
+            <!-- Heatmap Side-by-Side Comparison -->
+            <div class="xai-comparison-grid">
+              <div class="xai-panel">
+                <span class="panel-subtitle">Original Specimen</span>
+                <div class="xai-img-frame">
+                  <img id="xai-orig-img" src="/static/samples/tomato_early_blight.jpg" alt="Original Leaf" />
+                </div>
+              </div>
+
+              <div class="xai-panel">
+                <span class="panel-subtitle">AI Attention Map (Grad-CAM Gradient Activations)</span>
+                <div class="xai-img-frame">
+                  <img id="xai-gradcam-img" src="/static/samples/tomato_early_blight.jpg" alt="Grad-CAM Heatmap" />
+                  <div class="gradcam-colorbar">
+                    <span class="cb-label">Low Attention</span>
+                    <div class="cb-gradient"></div>
+                    <span class="cb-label">High Attention</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Where AI Found Important Patterns -->
+            <div class="xai-explanation-box">
+              <h3>Where AI Found Important Patterns</h3>
+              <div class="pattern-checklist" id="xai-pattern-list">
+                <div class="pat-item matched"><i class="fa-solid fa-circle-check"></i> Brown spots detected</div>
+                <div class="pat-item matched"><i class="fa-solid fa-circle-check"></i> Abnormal leaf pigmentation</div>
+                <div class="pat-item matched"><i class="fa-solid fa-circle-check"></i> Irregular texture patterns</div>
+                <div class="pat-item matched"><i class="fa-solid fa-circle-check"></i> Disease-specific lesion structure</div>
+              </div>
+              <div class="xai-conclusion" id="xai-summary-text">
+                <i class="fa-solid fa-circle-info text-primary"></i>
+                AI focused primarily on the concentric lesion spotted regions which match early blight characteristics.
+              </div>
+            </div>
+
+            <div class="card-footer-actions">
+              <button class="btn btn-primary" onclick="navigateTo('disease-result')">
+                View Disease Detection & Risk Level &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 8. DISEASE DETECTION RESULT VIEW (Panel 9) -->
+        <!-- ============================================== -->
+        <section id="view-disease-result" class="app-view">
+          <div class="section-nav-head">
+            <button class="btn btn-sm btn-outline" onclick="navigateTo('explainable-ai')">&larr; Back to Attention Map</button>
+            <div class="nav-breadcrumbs">
+              <span class="crumb" onclick="navigateTo('cv-results')">1. CV Analysis</span> &rarr;
+              <span class="crumb" onclick="navigateTo('explainable-ai')">2. Explainable AI</span> &rarr;
+              <span class="crumb active" onclick="navigateTo('disease-result')">3. Diagnosis</span> &rarr;
+              <span class="crumb" onclick="navigateTo('recommendations')">4. Treatment Plan</span>
+            </div>
+            <button class="btn btn-sm btn-primary" onclick="navigateTo('recommendations')">Next: Treatment &rarr;</button>
+          </div>
+
+          <!-- Instant Crop Switch Toolbar (Quick re-evaluation if auto detected wrong crop) -->
+          <div class="crop-switch-bar card mb-3" style="padding:10px 16px; background:rgba(30, 41, 59, 0.7); border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span style="font-size:0.85rem; color:#94a3b8; font-weight:600;"><i class="fa-solid fa-arrows-rotate text-teal"></i> Wrong crop name? Re-run this image as:</span>
+            </div>
+            <div class="crop-switch-pills" id="diag-crop-switch-pills" style="display:flex; gap:6px; flex-wrap:wrap;">
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Tomato" onclick="switchDiagnosisCrop('Tomato')">🍅 Tomato</button>
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Rice" onclick="switchDiagnosisCrop('Rice')">🌾 Rice</button>
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Chilli" onclick="switchDiagnosisCrop('Chilli')">🌶️ Chilli</button>
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Sugarcane" onclick="switchDiagnosisCrop('Sugarcane')">🎋 Sugarcane</button>
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Blackgram" onclick="switchDiagnosisCrop('Blackgram')">🌱 Blackgram</button>
+              <button type="button" class="btn btn-xs btn-outline" data-crop="Soybean" onclick="switchDiagnosisCrop('Soybean')">🌿 Soybean</button>
+            </div>
+          </div>
+
+          <!-- Alert Banner -->
+          <div class="alert-banner alert-high" id="disease-alert-banner">
+            <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div class="alert-text">
+              <h3 id="disease-alert-title">🔴 ATTENTION REQUIRED</h3>
+              <p id="disease-alert-subtitle">Potential fungal infection detected. Immediate management recommended.</p>
+            </div>
+            <span class="risk-badge badge-high" id="disease-risk-badge">Risk Level: HIGH</span>
+          </div>
+
+          <!-- LEAF TYPE + DISEASE % SUMMARY CARD -->
+          <div class="leaf-summary-card" id="leaf-summary-card">
+            <div class="leaf-summary-col">
+              <div class="leaf-sum-icon">🌿</div>
+              <div class="leaf-sum-info">
+                <span class="leaf-sum-label">Leaf / Plant Type</span>
+                <strong class="leaf-sum-val" id="leaf-type-display">Tomato Leaf (Solanum lycopersicum)</strong>
+              </div>
+            </div>
+            <div class="leaf-summary-divider"></div>
+            <div class="leaf-summary-col">
+              <div class="leaf-sum-icon">🔬</div>
+              <div class="leaf-sum-info">
+                <span class="leaf-sum-label">Disease Detected</span>
+                <strong class="leaf-sum-val" id="leaf-disease-display">Tomato Early Blight</strong>
+              </div>
+            </div>
+            <div class="leaf-summary-divider"></div>
+            <div class="leaf-summary-col">
+              <div class="leaf-sum-icon">📊</div>
+              <div class="leaf-sum-info">
+                <span class="leaf-sum-label">Leaf Area Affected</span>
+                <strong class="leaf-sum-val text-danger" id="leaf-affected-display">16% of leaf</strong>
+              </div>
+            </div>
+            <div class="leaf-summary-divider"></div>
+            <div class="leaf-summary-col">
+              <div class="leaf-sum-icon">🎯</div>
+              <div class="leaf-sum-info">
+                <span class="leaf-sum-label">AI Confidence</span>
+                <strong class="leaf-sum-val text-green" id="leaf-conf-display">92%</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Diagnosis Card -->
+          <div class="card disease-card">
+            <div class="diagnosis-top-grid">
+              <div class="diag-thumb">
+                <img id="diag-thumb-img" src="/static/samples/tomato_early_blight.jpg" alt="Diagnosed Leaf" />
+              </div>
+
+              <div class="diag-main-info">
+                <div class="diag-header-line">
+                  <h2 id="diag-disease-name">Tomato Early Blight</h2>
+                  <span class="crop-tag" id="diag-crop-name">Tomato</span>
+                </div>
+
+                <!-- Confidence Gauge Bar -->
+                <div class="confidence-box">
+                  <div class="conf-label-row">
+                    <span>AI Confidence</span>
+                    <strong class="text-green" id="diag-conf-pct">92%</strong>
+                  </div>
+                  <div class="prog-bar-track">
+                    <div class="prog-bar-fill bg-green" id="diag-conf-bar" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <!-- Multi-class Probabilities -->
+                <div class="multi-class-list" id="diag-multiclass-list">
+                  <div class="mc-item"><span>Early Blight</span><span class="mc-val">92%</span></div>
+                  <div class="mc-item"><span>Healthy Leaf</span><span class="mc-val">5%</span></div>
+                  <div class="mc-item"><span>Leaf Spot</span><span class="mc-val">3%</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabbed Detailed Specifications -->
+            <div class="diag-tabs-wrapper mt-4">
+              <div class="tab-pill-group">
+                <button class="tab-pill active" onclick="switchDiagTab('symptoms')">Symptoms</button>
+                <button class="tab-pill" onclick="switchDiagTab('causes')">Causes & Pathogen</button>
+                <button class="tab-pill" onclick="switchDiagTab('treatment')">Quick Treatment</button>
+              </div>
+
+              <div class="diag-tab-content active" id="diag-tab-symptoms">
+                <h4>Key Symptoms Identified</h4>
+                <ul class="symptom-bullets" id="diag-symptoms-list">
+                  <li>Brown circular spots with concentric rings (target board pattern)</li>
+                  <li>Yellow chlorotic halo surrounding lesion margins</li>
+                  <li>Irregular, dry brittle leaf texture</li>
+                  <li>Lower older foliage impacted first</li>
+                </ul>
+              </div>
+
+              <div class="diag-tab-content" id="diag-tab-causes" style="display:none;">
+                <h4>Pathogen & Contributing Factors</h4>
+                <p id="diag-causes-text">
+                  Fungal pathogen <em>Alternaria solani</em>. Overwinters on infected plant debris. Spores disperse rapidly via rain splash, irrigation, wind, and contaminated tools under warm humid conditions (24-29°C).
+                </p>
+              </div>
+
+              <div class="diag-tab-content" id="diag-tab-treatment" style="display:none;">
+                <h4>Recommended Actions</h4>
+                <div class="quick-treat-box">
+                  <p><strong>Organic Option:</strong> <span id="diag-quick-org">Apply copper fungicide, prune lower infected leaves, apply neem oil spray.</span></p>
+                  <p><strong>Mineral Option:</strong> <span id="diag-quick-min">Apply Mancozeb 75% WP or Chlorothalonil according to label instructions.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP-BY-STEP WORKFLOW BANNER: Step 1 Crop Doctor -> Step 2 Soil Health -->
+            <div class="guided-step-banner card mt-4" style="background: linear-gradient(135deg, rgba(34,197,94,0.08), rgba(59,130,246,0.08)); border: 1.5px solid rgba(34,197,94,0.3); border-radius: 12px; padding: 20px;">
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span class="badge badge-success" style="font-size:0.9rem; padding:6px 12px;"><i class="fa-solid fa-check"></i> Step 1: Crop Doctor Complete</span>
+                  <span class="badge badge-primary" style="font-size:0.9rem; padding:6px 12px;"><i class="fa-solid fa-arrow-right"></i> Step 2: Soil Health (Optional)</span>
+                </div>
+                <span class="text-muted" style="font-size:0.85rem;"><i class="fa-solid fa-circle-info text-info"></i> Guided Diagnostic Flow</span>
+              </div>
+              <h3 style="margin:0 0 8px 0; font-size:1.15rem; color:var(--text-main);">📸 Would you like to add a Soil Photo to check Soil Health?</h3>
+              <p style="margin:0 0 16px 0; font-size:0.92rem; color:var(--text-muted); line-height:1.5;">
+                • <strong>If you provide a soil photo:</strong> SoilDoctor will analyze both and <strong>compare Crop Health &amp; Soil Health together</strong> for a complete correlation report.<br>
+                • <strong>If no soil photo is given:</strong> Diagnosis proceeds based on <strong>crop foliage health only</strong>.
+              </p>
+              <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                <button class="btn btn-primary" onclick="startGuidedSoilStep()" style="padding:10px 20px; font-weight:600;">
+                  <i class="fa-solid fa-camera"></i> Yes, Scan Soil Photo (Compare Both)
+                </button>
+                <button class="btn btn-outline" onclick="skipSoilStepAndContinue()" style="padding:10px 20px;">
+                  <i class="fa-solid fa-forward-step"></i> Skip — Crop Health Only &rarr;
+                </button>
+              </div>
+            </div>
+
+            <div class="card-footer-actions mt-3">
+              <button class="btn btn-outline" onclick="navigateTo('cv-results')">
+                &larr; Back to CV Features
+              </button>
+              <button class="btn btn-primary" onclick="navigateTo('recommendations')">
+                <i class="fa-solid fa-prescription-bottle-medical"></i> View Treatment Plan &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 9. SOIL ANALYSIS VIEW (Panel 10) -->
+        <!-- ============================================== -->
+        <section id="view-soil-health" class="app-view">
+          <div class="section-center-head">
+            <h2>Soil Vision & Chemical Health Assessment</h2>
+            <p>SoilDoctor connects physical surface imaging with laboratory chemical calibration.</p>
+          </div>
+
+          <div class="soil-layout-grid">
+            <!-- Soil Vision Panel -->
+            <div class="card soil-img-card">
+              <div class="card-header">
+                <h3>Visual Soil Analysis (From Image)</h3>
+                <span class="badge badge-light">OpenCV heuristic · demo</span>
+              </div>
+              <div class="soil-visual-frame">
+                <img id="soil-display-img" src="/static/samples/loamy_soil.jpg" alt="Soil Texture" />
+              </div>
+
+              <div class="soil-attributes-table">
+                <div class="s-attr-row">
+                  <span class="s-lbl"><i class="fa-solid fa-layer-group text-muted"></i> Texture</span>
+                  <strong class="s-val" id="soil-attr-texture">Loamy</strong>
+                </div>
+                <div class="s-attr-row">
+                  <span class="s-lbl"><i class="fa-solid fa-droplet text-muted"></i> Color</span>
+                  <strong class="s-val text-brown" id="soil-attr-color">Dark Brown</strong>
+                </div>
+                <div class="s-attr-row">
+                  <span class="s-lbl"><i class="fa-solid fa-cube text-muted"></i> Surface</span>
+                  <strong class="s-val" id="soil-attr-surface">Normal / Granular</strong>
+                </div>
+                <div class="s-attr-row">
+                  <span class="s-lbl"><i class="fa-solid fa-cloud-rain text-muted"></i> Image Moisture Estimate</span>
+                  <strong class="s-val text-teal" id="soil-attr-moisture">Not measured from photo</strong>
+                </div>
+                <div class="s-attr-row">
+                  <span class="s-lbl"><i class="fa-solid fa-recycle text-muted"></i> Organic Matter</span>
+                  <strong class="s-val text-orange" id="soil-attr-organic">Not measured from photo</strong>
+                </div>
+              </div>
+
+              <div class="scientific-disclaimer">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span><strong>Scientific note:</strong> Soil type is only a rough OpenCV color/surface estimate; no soil-image training dataset is connected. A photo cannot measure pH, N-P-K, moisture, or organic matter. Enter readings from a real sensor or lab test below; simulated demo values are labeled separately.</span>
+              </div>
+            </div>
+
+            <!-- Chemical & Nutrient Calibration Panel -->
+            <div class="card soil-calib-card">
+              <div class="card-header">
+                <h3>Soil Chemical Test & Sensor Readings</h3>
+                <span class="badge badge-light" id="soil-measurement-source">No sensor readings supplied</span>
+              </div>
+
+              <form id="soil-calib-form" onsubmit="recalculateSoilNutrients(event)">
+                <div class="form-group">
+                  <label>Soil pH Level: <strong id="ph-val-display">6.4 (Slightly Acidic)</strong></label>
+                  <input type="range" class="form-range" id="input-soil-ph" min="4.5" max="8.5" step="0.1" value="6.4" oninput="updatePhDisplay(this.value)" />
+                  <div class="range-labels">
+                    <span>Acidic (&lt;6.0)</span>
+                    <span class="text-green">Optimal (6.0 - 7.0)</span>
+                    <span>Alkaline (&gt;7.5)</span>
+                  </div>
+                </div>
+
+                <div class="form-grid-3">
+                  <div class="form-group">
+                    <label>Nitrogen (N)</label>
+                    <select id="input-n-status" class="form-select">
+                      <option value="Low" selected>Low (Deficient)</option>
+                      <option value="Normal">Normal (Optimal)</option>
+                      <option value="High">High (Excess)</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Phosphorus (P)</label>
+                    <select id="input-p-status" class="form-select">
+                      <option value="Low">Low</option>
+                      <option value="Normal" selected>Normal</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Potassium (K)</label>
+                    <select id="input-k-status" class="form-select">
+                      <option value="Low">Low</option>
+                      <option value="Normal" selected>Normal</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>Moisture Content (%): <strong id="moisture-display">28%</strong></label>
+                  <input type="range" class="form-range" id="input-moisture" min="10" max="60" value="28" oninput="document.getElementById('moisture-display').innerText = this.value + '%'" />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-arrows-rotate"></i> Update Nutrient Gauges & Recommendations
+                </button>
+              </form>
+
+              <!-- Radial Nutrient Status Gauges (Panel 11) -->
+              <h4 class="mt-4">Nutrient Status Dials</h4>
+              <div class="dials-grid">
+                <!-- Nitrogen Dial -->
+                <div class="dial-item">
+                  <div class="circular-dial dial-low">
+                    <span class="dial-val" id="dial-n-text">N</span>
+                  </div>
+                  <span class="dial-name">Nitrogen (N)</span>
+                  <span class="badge badge-warning" id="dial-n-badge">Low</span>
+                </div>
+
+                <!-- Phosphorus Dial -->
+                <div class="dial-item">
+                  <div class="circular-dial dial-norm">
+                    <span class="dial-val" id="dial-p-text">P</span>
+                  </div>
+                  <span class="dial-name">Phosphorus (P)</span>
+                  <span class="badge badge-success" id="dial-p-badge">Normal</span>
+                </div>
+
+                <!-- Potassium Dial -->
+                <div class="dial-item">
+                  <div class="circular-dial dial-norm">
+                    <span class="dial-val" id="dial-k-text">K</span>
+                  </div>
+                  <span class="dial-name">Potassium (K)</span>
+                  <span class="badge badge-success" id="dial-k-badge">Normal</span>
+                </div>
+
+                <!-- pH Dial -->
+                <div class="dial-item">
+                  <div class="circular-dial dial-opt">
+                    <span class="dial-val" id="dial-ph-text">6.4</span>
+                  </div>
+                  <span class="dial-name">pH Level</span>
+                  <span class="badge badge-light" id="dial-ph-badge">Slightly Acidic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMBINED CROP & SOIL HEALTH COMPARISON CARD (Panel 10B) -->
+          <div class="card mt-4" id="combined-health-card" style="display:none; border: 2px solid rgba(16,185,129,0.3); border-radius: 14px; background: linear-gradient(180deg, rgba(16,185,129,0.04) 0%, rgba(255,255,255,0) 100%);">
+            <div class="card-header" style="border-bottom: 1px solid rgba(16,185,129,0.2);">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <span class="badge badge-success" id="combined-step-label" style="font-size:0.95rem; padding:6px 12px;"><i class="fa-solid fa-code-compare"></i> Step 2 Correlation</span>
+                <h3 id="combined-card-title" style="margin:0;">Combined Crop Health &amp; Soil Health Comparison</h3>
+              </div>
+              <span class="badge badge-primary" id="combined-status-badge">Dual-Specimen Correlated</span>
+            </div>
+            <div class="card-body p-4">
+              <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-bottom:20px;">
+                <!-- Crop Summary Box -->
+                <div style="background:var(--bg-main); border:1px solid var(--border-color); border-radius:10px; padding:16px;">
+                  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+                    <i class="fa-solid fa-leaf text-green" style="font-size:1.3rem;"></i>
+                    <h4 style="margin:0; font-size:1.05rem;">Crop Foliage Diagnosis</h4>
+                  </div>
+                  <div style="font-size:0.92rem; line-height:1.6;">
+                    <div><strong>Crop:</strong> <span id="comb-crop-name">Tomato</span></div>
+                    <div><strong>Detected Condition:</strong> <span id="comb-disease-name" class="text-danger font-bold">Tomato Early Blight</span></div>
+                    <div><strong>Foliar Health Score:</strong> <span id="comb-crop-conf" class="badge badge-success">88%</span></div>
+                    <div><strong>Symptom Pattern:</strong> <span id="comb-symptoms" class="text-muted">Concentric brown lesions &amp; chlorotic halo</span></div>
+                  </div>
+                </div>
+
+                <!-- Soil Summary Box -->
+                <div style="background:var(--bg-main); border:1px solid var(--border-color); border-radius:10px; padding:16px;">
+                  <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px;">
+                    <i class="fa-solid fa-flask text-teal" style="font-size:1.3rem;"></i>
+                    <h4 style="margin:0; font-size:1.05rem;">Soil Chemical &amp; Visual Health</h4>
+                  </div>
+                  <div style="font-size:0.92rem; line-height:1.6;">
+                    <div><strong>Soil Type:</strong> <span id="comb-soil-type">Loamy Dark Brown</span></div>
+                    <div><strong>Nitrogen Status:</strong> <span id="comb-soil-n" class="badge badge-warning">Low (Deficient)</span></div>
+                    <div><strong>Phosphorus / Potassium:</strong> <span id="comb-soil-pk">Optimal (Balanced)</span></div>
+                    <div><strong>Moisture &amp; Tilth:</strong> <span id="comb-soil-moist">Adequate Moisture (28%)</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Correlation Finding Alert -->
+              <div style="background:rgba(59,130,246,0.08); border-left:4px solid #3B82F6; border-radius:6px; padding:14px; margin-bottom:20px;">
+                <h4 style="margin:0 0 6px 0; color:#1D4ED8; font-size:0.98rem;"><i class="fa-solid fa-lightbulb"></i> Agronomic Correlation Insight:</h4>
+                <p id="comb-correlation-text" style="margin:0; font-size:0.9rem; color:var(--text-main); line-height:1.5;">
+                  The low soil nitrogen levels correlate directly with the chlorotic halo expansion observed in the plant leaves. Nitrogen deficit weakens the plant cellular cuticle, accelerating pathogen spore invasion. Replenishing soil nitrogen will restore natural foliar resistance.
+                </p>
+              </div>
+
+              <!-- Navigation to Next Step: My Farm Location -->
+              <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                <button class="btn btn-outline" id="combined-back-crop-btn" onclick="navigateTo('disease-result')">
+                  &larr; Back to Crop Doctor
+                </button>
+                <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                  <button class="btn btn-outline" onclick="navigateTo('recommendations')">
+                    <i class="fa-solid fa-prescription-bottle-medical"></i> View Treatment Plan &rarr;
+                  </button>
+                  <button class="btn btn-primary" onclick="navigateTo('farm-mgmt')">
+                    <i class="fa-solid fa-location-dot"></i> Step 3: My Farm Location (Live GPS) &rarr;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 10. RECOMMENDATIONS ENGINE (Panel 12) -->
+        <!-- ============================================== -->
+        <section id="view-recommendations" class="app-view">
+          <div class="section-center-head">
+            <h2>Fertilizer & Treatment Recommendations</h2>
+            <p>Formulated by the AI Decision Engine considering crop stage, disease diagnosis, and soil nutrient status.</p>
+          </div>
+
+          <div class="recom-layout-grid">
+            <!-- Left: Recommended Action Card -->
+            <div class="card recom-main-card">
+              <div class="recom-priority-bar">
+                <span class="badge badge-high" id="rec-priority-badge">Priority: HIGH</span>
+                <span class="text-muted" id="rec-target-issue">Target Issue: Active Management</span>
+              </div>
+
+              <div class="recom-focus-box">
+                <span class="focus-subtitle">Recommended Focus:</span>
+                <h3 id="rec-focus-title">Targeted Agrochemical & Nutritional Plan</h3>
+                <p id="rec-focus-desc">AI-generated agronomic recommendations tailored specifically to this specimen.</p>
+              </div>
+
+              <!-- Based On Parameters -->
+              <div class="based-on-grid">
+                <div class="based-item">
+                  <span class="b-lbl">Crop:</span>
+                  <strong class="b-val" id="rec-crop">—</strong>
+                </div>
+                <div class="based-item">
+                  <span class="b-lbl">Growth Stage:</span>
+                  <strong class="b-val" id="rec-growth-stage">Vegetative</strong>
+                </div>
+                <div class="based-item">
+                  <span class="b-lbl">Soil N:</span>
+                  <strong class="b-val text-danger" id="rec-soil-n">Normal</strong>
+                </div>
+                <div class="based-item">
+                  <span class="b-lbl">Symptoms:</span>
+                  <strong class="b-val text-warning" id="rec-symptoms-val">—</strong>
+                </div>
+              </div>
+
+              <!-- Prescribed Fertilizers & Agrochemicals Table -->
+              <div class="prescribed-fertilizers-box mt-3" id="rec-fertilizers-section">
+                <h4><i class="fa-solid fa-prescription-bottle-medical text-primary"></i> Prescribed Fertilizers & Agrochemicals</h4>
+                <div class="fertilizer-table-wrapper">
+                  <table class="fertilizer-table" id="rec-fertilizer-table">
+                    <thead>
+                      <tr>
+                        <th>Required Input / Fertilizer</th>
+                        <th>Role / Purpose</th>
+                        <th>Exact Dosage</th>
+                        <th>Application Window</th>
+                      </tr>
+                    </thead>
+                    <tbody id="rec-fertilizer-tbody">
+                      <tr>
+                        <td colspan="4" class="text-muted" style="text-align:center; padding:12px;">Loading specific input requirements...</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- Action Checklist "What Should I Do?" -->
+              <div class="action-checklist-box">
+                <h4>What Should I Do? (Step-by-Step Action Plan)</h4>
+                <ol class="action-steps-list" id="rec-action-steps">
+                  <li><strong>Step 1:</strong> Remove and safely burn or compost-away heavily spotted lower foliage to halt spore splash.</li>
+                  <li><strong>Step 2:</strong> Apply protective copper-based or Mancozeb fungicide spray early morning.</li>
+                  <li><strong>Step 3:</strong> Apply nitrogen-rich fertilizer (Urea or organic enriched vermicompost) to restore vegetative vigor.</li>
+                  <li><strong>Step 4:</strong> Transition to drip irrigation; avoid sprinkler foliage wetting.</li>
+                  <li><strong>Step 5:</strong> Re-scan crop foliage after 14 days to confirm blight containment.</li>
+                </ol>
+              </div>
+
+              <!-- Dual Solution Tabs: Organic vs Mineral -->
+              <div class="dual-solution-box mt-4">
+                <div class="tab-pill-group">
+                  <button class="tab-pill active" onclick="switchRecTab('organic')">
+                    <i class="fa-solid fa-leaf"></i> Organic Option
+                  </button>
+                  <button class="tab-pill" onclick="switchRecTab('mineral')">
+                    <i class="fa-solid fa-flask"></i> Mineral / Conventional Option
+                  </button>
+                </div>
+
+                <div class="solution-tab-content active" id="rec-tab-organic">
+                  <h4>Organic & Biological Treatment</h4>
+                  <p id="rec-organic-text">
+                    Apply certified copper hydroxide (Bordeaux mixture 1%). Spray cold-pressed neem oil (5ml/L water) every 7 days. Drench soil with liquid jeevamrutha and incorporate 5 tons/acre of farmyard manure to regenerate soil organic carbon.
+                  </p>
+                </div>
+
+                <div class="solution-tab-content" id="rec-tab-mineral" style="display:none;">
+                  <h4>Conventional Chemical Treatment</h4>
+                  <p id="rec-mineral-text">
+                    Foliar spray Mancozeb 75% WP (2.5g/L water) or Chlorothalonil. Side-dress with Urea (46% N) at 25 kg/acre followed by light irrigation. Alternate with systemic Azoxystrobin (1ml/L) if disease persists during rainy spells.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card-footer-actions">
+                <button class="btn btn-outline" onclick="generateReportAndPrint()">
+                  <i class="fa-solid fa-file-pdf"></i> Download AI Report (PDF)
+                </button>
+                <button class="btn btn-primary" onclick="navigateTo('farm-mgmt')">
+                  <i class="fa-solid fa-map-location-dot"></i> View Field on Farm Map &rarr;
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Visual Reference Card -->
+            <div class="card recom-side-card">
+              <h3>Field Treatment Guide</h3>
+              <div class="recom-hero-img">
+                <img id="rec-hero-img" src="/static/samples/tomato_early_blight.jpg" alt="Crop Leaf" />
+              </div>
+
+              <div class="recom-quick-tips">
+                <div class="q-tip">
+                  <i class="fa-solid fa-clock text-green"></i>
+                  <div>
+                    <strong>Best Spray Time</strong>
+                    <span>Early morning (6:00 - 8:30 AM) when wind is calm.</span>
+                  </div>
+                </div>
+                <div class="q-tip">
+                  <i class="fa-solid fa-droplet text-teal"></i>
+                  <div>
+                    <strong>Watering Protocol</strong>
+                    <span>Water at ground level. Keep leaves completely dry.</span>
+                  </div>
+                </div>
+                <div class="q-tip">
+                  <i class="fa-solid fa-shield-halved text-blue"></i>
+                  <div>
+                    <strong>Protection Equipment</strong>
+                    <span>Wear gloves and mask during spray application.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 11. FARM MANAGEMENT VIEW (Panel 13) -->
+        <!-- ============================================== -->
+        <section id="view-farm-mgmt" class="app-view">
+          <div class="section-center-head">
+            <h2>My Farm — Field & Crop Spatial Map</h2>
+            <p>Monitor geographical health across all registered plots and schedule field-level interventions.</p>
+          </div>
+
+          <div class="farm-layout-grid">
+            <!-- Left: Interactive Leaflet Map -->
+            <div class="card map-card">
+              <div class="map-header">
+                <div class="map-title-box">
+                  <h3>My Farm Plots</h3>
+                  <span class="text-muted" id="map-coord-display">Lat: 11.019° N, Lng: 76.955° E</span>
+                </div>
+                <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                  <button class="btn btn-sm btn-outline" onclick="useLiveFarmLocation()" id="btn-live-loc" title="Use my current GPS location">
+                    <i class="fa-solid fa-location-crosshairs"></i> Use My Location
+                  </button>
+                  <button class="btn btn-sm btn-primary" onclick="openAddFieldModal()">
+                    <i class="fa-solid fa-plus"></i> Add Field
+                  </button>
+                </div>
+              </div>
+
+              <!-- Leaflet Map Container -->
+              <div id="farm-map" class="leaflet-container-box"></div>
+
+              <div class="map-legend">
+                <div class="legend-item"><span class="legend-color bg-green"></span> 🟢 Healthy Field</div>
+                <div class="legend-item"><span class="legend-color bg-orange"></span> 🟠 Needs Attention</div>
+                <div class="legend-item"><span class="legend-color bg-danger"></span> 🔴 High Disease Risk</div>
+              </div>
+            </div>
+
+            <!-- Right: Field Details Inspector -->
+            <div class="card field-details-card">
+              <div class="card-header">
+                  <h3 id="field-detail-name">Select a field</h3>
+                  <span class="badge badge-light" id="field-detail-badge">No field selected</span>
+              </div>
+
+              <div class="field-meta-list">
+                <div class="fm-row">
+                  <span class="fm-lbl"><i class="fa-solid fa-seedling text-muted"></i> Primary Crop:</span>
+                  <strong class="fm-val" id="field-detail-crop">—</strong>
+                </div>
+                <div class="fm-row">
+                  <span class="fm-lbl"><i class="fa-solid fa-ruler-combined text-muted"></i> Area:</span>
+                  <span class="fm-val font-mono" id="field-detail-area">—</span>
+                </div>
+                <div class="fm-row">
+                  <span class="fm-lbl"><i class="fa-solid fa-calendar-day text-muted"></i> Last Scan Date:</span>
+                  <span class="fm-val" id="field-detail-date">No scan recorded</span>
+                </div>
+                <div class="fm-row">
+                  <span class="fm-lbl"><i class="fa-solid fa-file-lines text-muted"></i> Latest Report:</span>
+                  <span class="fm-val" id="field-detail-issue">Select a field to see its latest report.</span>
+                </div>
+              </div>
+
+              <h4 class="mt-4">Registered Fields in Farm</h4>
+              <div class="farm-fields-picker" id="fields-list-container">
+                <!-- Dynamically populated -->
+              </div>
+
+              <div class="field-actions mt-4">
+                <button class="btn btn-primary btn-block" onclick="navigateTo('scan-options')">
+                  <i class="fa-solid fa-camera"></i> Scan This Field Now
+                </button>
+                <button class="btn btn-outline btn-block mt-2" onclick="navigateTo('analytics')" style="font-weight:600;">
+                  <i class="fa-solid fa-chart-line"></i> Step 4: View Farm Analytics &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 12. ANALYTICS VIEW (Panel 14) -->
+        <!-- ============================================== -->
+        <section id="view-analytics" class="app-view">
+          <div class="section-center-head">
+            <h2>Farm Health Trends & Epidemiology Analytics</h2>
+            <p>Historical trends in crop vitality, disease outbreaks, and spray intervention efficacy.</p>
+          </div>
+
+          <!-- Top Analytics KPI Stats -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-title">Disease Cases</span>
+                <span class="kpi-icon-wrap bg-red-light"><i class="fa-solid fa-virus text-danger"></i></span>
+              </div>
+              <div class="kpi-val text-danger" id="an-disease-cases">4</div>
+              <div class="kpi-meta text-green"><i class="fa-solid fa-arrow-trend-down"></i> -21% from last month</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-title">Healthy Scans</span>
+                <span class="kpi-icon-wrap bg-green-light"><i class="fa-solid fa-check text-green"></i></span>
+              </div>
+              <div class="kpi-val text-green" id="an-healthy-scans">21</div>
+              <div class="kpi-meta text-green"><i class="fa-solid fa-arrow-trend-up"></i> +15% from last month</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-title">Potential Issues</span>
+                <span class="kpi-icon-wrap bg-orange-light"><i class="fa-solid fa-triangle-exclamation text-orange"></i></span>
+              </div>
+              <div class="kpi-val text-orange" id="an-potential-issues">5</div>
+              <div class="kpi-meta text-muted">Nutrient & moisture flags</div>
+            </div>
+
+            <div class="kpi-card">
+              <div class="kpi-header">
+                <span class="kpi-title">Average Health</span>
+                <span class="kpi-icon-wrap bg-teal-light"><i class="fa-solid fa-heart-pulse text-teal"></i></span>
+              </div>
+              <div class="kpi-val text-teal" id="an-avg-health">84%</div>
+              <div class="kpi-meta text-green"><i class="fa-solid fa-arrow-trend-up"></i> +6% overall</div>
+            </div>
+          </div>
+
+          <!-- Charts Grid (Chart.js) -->
+          <div class="analytics-charts-grid">
+            <!-- Left: Line Chart for Crop Health Trends -->
+            <div class="card chart-card">
+              <div class="card-header">
+                <h3>Crop Health Trends (September 2026)</h3>
+                <span class="badge badge-light">Multi-Crop Monitoring</span>
+              </div>
+              <div class="chart-canvas-wrap">
+                <canvas id="chart-health-trends"></canvas>
+              </div>
+            </div>
+
+            <!-- Right: Doughnut Chart for Disease Distribution -->
+            <div class="card chart-card">
+              <div class="card-header">
+                <h3>Disease & Health Distribution</h3>
+                <span class="badge badge-light">Current Month</span>
+              </div>
+              <div class="chart-canvas-wrap doughnut-wrap">
+                <canvas id="chart-disease-dist"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Guided Step 5 Link -->
+          <div class="card mt-4 p-3" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; background:linear-gradient(135deg, rgba(34,197,94,0.06), rgba(59,130,246,0.06)); border:1.5px solid rgba(34,197,94,0.3); border-radius:12px;">
+            <div>
+              <h4 style="margin:0 0 4px 0;"><i class="fa-solid fa-clock-rotate-left text-green"></i> Step 5: Field Inspection History</h4>
+              <p class="text-muted" style="margin:0; font-size:0.88rem;">Review past diagnostic scans with OpenCV leaf segmentation and Grad-CAM attention heatmaps.</p>
+            </div>
+            <button class="btn btn-primary" onclick="navigateTo('history')" style="font-weight:600;">
+              Next: View Scan History &rarr;
+            </button>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 13. SCAN HISTORY VIEW (Panel 15) -->
+        <!-- ============================================== -->
+        <section id="view-history" class="app-view">
+          <div class="section-center-head">
+            <h2>Scan History & Diagnostics Archive</h2>
+            <p id="history-view-description">Access previous scans, compare historical changes, and re-download AI reports.</p>
+          </div>
+
+          <div class="card mb-3" id="history-latest-summary" style="display:none;"></div>
+
+          <div class="card">
+            <div class="card-header">
+              <h3>Saved scan reports</h3>
+              <span class="badge badge-light" id="history-record-count">0 scans</span>
+            </div>
+            <!-- Filter Toolbar -->
+            <div class="history-toolbar">
+              <div class="history-filters">
+                <button class="filter-pill active" data-filter="all" onclick="filterHistory('all', this)">All</button>
+                <button class="filter-pill" data-filter="plant" onclick="filterHistory('plant', this)">Plant / Leaf</button>
+                <button class="filter-pill" data-filter="soil" onclick="filterHistory('soil', this)">Soil</button>
+                <button class="filter-pill" data-filter="disease" onclick="filterHistory('disease', this)">Diseases</button>
+                <button class="filter-pill" data-filter="healthy" onclick="filterHistory('healthy', this)">Healthy</button>
+              </div>
+
+              <div class="search-input-wrap">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="history-search" placeholder="Search crop or disease..." oninput="searchHistory(this.value)" />
+              </div>
+            </div>
+
+            <!-- History Table/List -->
+            <div class="history-table-wrap">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Specimen</th>
+                    <th>Diagnosis / Result</th>
+                    <th>Confidence</th>
+                    <th>Risk</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body">
+                  <!-- Dynamically populated -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Guided Step 6 Link -->
+            <div class="card-footer-actions p-3" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; background:linear-gradient(135deg, rgba(34,197,94,0.06), rgba(59,130,246,0.06)); border-top:1px solid var(--border-color);">
+              <div>
+                <h4 style="margin:0 0 4px 0;"><i class="fa-solid fa-file-pdf text-danger"></i> Step 6: Comprehensive AI Diagnostic Report</h4>
+                <p class="text-muted" style="margin:0; font-size:0.88rem;">Generate and print official certified report with OpenCV biometric data and treatment schedule.</p>
+              </div>
+              <button class="btn btn-primary" onclick="navigateTo('report-view')" style="font-weight:600;">
+                Next: View &amp; Print Official AI Report &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 14. CROP DOCTOR KNOWLEDGE BASE (Panel 16) -->
+        <!-- ============================================== -->
+        <section id="view-crop-doctor" class="app-view">
+          <div class="section-center-head">
+            <h2>Crop Doctor — Agronomic Encyclopedia</h2>
+            <p>Comprehensive field handbook of plant pathologies, visual symptoms, and fertilizer nutrition.</p>
+          </div>
+
+          <div class="crop-doctor-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="crop-doctor-search" placeholder="Search crops: Tomato, Rice, Chilli, Sugarcane, Blackgram, Soybean..." oninput="filterCropCards(this.value)" />
+          </div>
+
+          <div class="crop-cards-grid" id="crop-doctor-grid">
+            <!-- Dynamically populated from SQLite crops table -->
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 15. AI REPORT VIEW (Panel 17) -->
+        <!-- ============================================== -->
+        <section id="view-report-view" class="app-view">
+          <div class="report-toolbar hide-print">
+            <button class="btn btn-outline" onclick="navigateTo('dashboard')">&larr; Back to Dashboard</button>
+            <div class="report-print-btns">
+              <button class="btn btn-primary" onclick="window.print()">
+                <i class="fa-solid fa-print"></i> Print Official Report
+              </button>
+            </div>
+          </div>
+
+          <!-- Printable Clinical Report Card -->
+          <div class="printable-report-sheet card" id="printable-report-sheet">
+            <div class="report-header">
+              <div class="report-brand">
+                <span class="rep-logo">🌱</span>
+                <div>
+                  <h1 class="rep-title">SOILDOCTOR AI DIAGNOSTIC REPORT</h1>
+                  <span class="rep-subtitle">AI-Powered Crop & Soil Health Diagnostic System</span>
+                </div>
+              </div>
+              <div class="report-cert-meta">
+                <div><strong>Report ID:</strong> <span id="rep-id">#SD-2026-0922</span></div>
+                <div><strong>Date:</strong> <span id="rep-date">15 September 2026</span></div>
+                <div><strong>Farmer:</strong> <span id="rep-farmer">Ramesh Kumar</span></div>
+                <div><strong>Location:</strong> <span id="rep-location">Coimbatore, Tamil Nadu</span></div>
+              </div>
+            </div>
+
+            <hr class="rep-divider" />
+
+            <!-- Specimen & Diagnosis Grid -->
+            <div class="rep-section-grid">
+              <div class="rep-col">
+                <h3>Specimen Information</h3>
+                <table class="rep-mini-table">
+                  <tr><td>Crop Name:</td><td id="rep-crop"><strong>Tomato (Solanum lycopersicum)</strong></td></tr>
+                  <tr><td>Field Plot:</td><td>Field B (North Acreage)</td></tr>
+                  <tr><td>Stage:</td><td>Vegetative / Early Flowering</td></tr>
+                  <tr><td>Scan Mode:</td><td>Computer Vision & Grad-CAM</td></tr>
+                </table>
+              </div>
+
+              <div class="rep-col">
+                <h3>Primary AI Diagnosis</h3>
+                <div class="rep-diag-box">
+                  <div class="rep-diag-name" id="rep-diag-name">Tomato Early Blight</div>
+                  <div class="rep-diag-meta">
+                    <span>Confidence: <strong class="text-green" id="rep-conf">92%</strong></span> |
+                    <span>Risk Level: <strong class="text-danger" id="rep-risk">HIGH</strong></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Computer Vision & Grad-CAM Visual Evidence -->
+            <h3 class="mt-4">Computer Vision & Explainable AI Evidence</h3>
+            <div class="rep-cv-evidence-grid">
+              <div class="rep-cv-img-box">
+                <img id="rep-img-orig" src="/static/samples/tomato_early_blight.jpg" alt="Original Specimen" />
+                <span>Original Specimen</span>
+              </div>
+              <div class="rep-cv-img-box">
+                <img id="rep-img-seg" src="/static/samples/tomato_early_blight.jpg" alt="Segmented Mask" />
+                <span>OpenCV Leaf Mask</span>
+              </div>
+              <div class="rep-cv-img-box">
+                <img id="rep-img-gradcam" src="/static/samples/tomato_early_blight.jpg" alt="Grad-CAM Heatmap" />
+                <span>Grad-CAM Attention Heatmap</span>
+              </div>
+            </div>
+
+            <!-- Feature & Soil Integration -->
+            <div class="rep-section-grid mt-4">
+              <div class="rep-col">
+                <h3>Extracted Morphological Metrics</h3>
+                <ul class="rep-bullets">
+                  <li><strong>Contour Area:</strong> <span id="rep-area">82,209 px</span></li>
+                  <li><strong>Leaf Lamina Texture:</strong> <span id="rep-texture">Irregular Surface</span></li>
+                  <li><strong>Lesion Anomaly Area:</strong> <span id="rep-affected">10.7% of leaf area</span></li>
+                  <li><strong>Pattern Characteristics:</strong> Concentric necrotic rings with chlorotic halo</li>
+                </ul>
+              </div>
+
+              <div class="rep-col">
+                <h3 id="rep-soil-header">Soil & Nutrition Calibration</h3>
+                <ul class="rep-bullets" id="rep-soil-details">
+                  <li><strong>Soil Type:</strong> Loamy Dark Brown</li>
+                  <li><strong>Soil pH:</strong> 6.4 (Slightly Acidic - Favorable)</li>
+                  <li><strong>Nitrogen Status:</strong> <strong class="text-danger">Low (Deficient)</strong></li>
+                  <li><strong>Phosphorus / Potassium:</strong> Normal</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Prescription Action Plan -->
+            <div class="rep-prescription-box mt-4">
+              <h3>Prescription & Action Plan</h3>
+              <div class="rep-action-item">
+                <strong>1. Immediate Antifungal Treatment:</strong>
+                <p>Apply certified copper fungicide (Bordeaux mixture 1%) or Mancozeb 75% WP (2.5g/L water). Prune and destroy diseased foliage from bottom canopy.</p>
+              </div>
+              <div class="rep-action-item">
+                <strong>2. Nutrition Replenishment:</strong>
+                <p>Side-dress with soluble Urea (20 kg/acre) or enriched vermicompost to overcome nitrogen deficit and strengthen cuticle resistance.</p>
+              </div>
+              <div class="rep-action-item">
+                <strong>3. Monitoring:</strong>
+                <p>Re-evaluate plot with SoilDoctor in 14 days to confirm lesion spore stabilization.</p>
+              </div>
+            </div>
+
+            <div class="rep-signature-row">
+              <div class="rep-sig">
+                <div class="sig-line"></div>
+                <span>AI Automated Agronomist Engine</span>
+              </div>
+              <div class="rep-sig">
+                <div class="sig-line"></div>
+                <span>Farmer / Field Manager Sign-off</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 16. PROFILE & SETTINGS VIEW (Panel 18) -->
+        <!-- ============================================== -->
+        <section id="view-settings" class="app-view">
+          <div class="section-center-head">
+            <h2>Farmer Profile & Application Settings</h2>
+            <p>Manage your farm coordinates, contact preferences, and display settings.</p>
+          </div>
+
+          <div class="settings-grid">
+            <!-- Profile Card -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Farmer Profile</h3>
+                <span class="badge badge-light">Registered User</span>
+              </div>
+
+              <form id="profile-form" onsubmit="saveProfileSettings(event)">
+                <div class="profile-header-preview">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Avatar" class="profile-avatar-lg" />
+                  <div>
+                    <h3 id="prof-display-name">Ramesh Kumar</h3>
+                    <span class="text-muted" id="prof-display-sub">Farmer • Coimbatore, Tamil Nadu</span>
+                  </div>
+                </div>
+
+                <div class="form-group mt-3">
+                  <label>Full Name</label>
+                  <input type="text" class="form-control" id="prof-input-name" value="Ramesh Kumar" required />
+                </div>
+
+                <div class="form-group">
+                  <label>Email Address</label>
+                  <input type="email" class="form-control" id="prof-input-email" value="ramesh@example.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" class="form-control" id="prof-input-phone" value="+91 98765 43210" required />
+                </div>
+
+                <div class="form-group">
+                  <label>Farm Location / Region</label>
+                  <input type="text" class="form-control" id="prof-input-location" value="Coimbatore, Tamil Nadu" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fa-solid fa-floppy-disk"></i> Save Profile Changes
+                </button>
+              </form>
+            </div>
+
+            <!-- App Preferences Card -->
+            <div class="card">
+              <div class="card-header">
+                <h3>Application Settings</h3>
+                <span class="badge badge-success">System Config</span>
+              </div>
+
+              <div class="toggle-setting-list">
+                <div class="toggle-item">
+                  <div class="toggle-meta">
+                    <strong>Disease Outbreak Alerts</strong>
+                    <span>Receive instant alerts for regional fungal or pest outbreaks</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="toggle-notifications" checked onchange="saveAppToggles()" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="toggle-item">
+                  <div class="toggle-meta">
+                    <strong>Weekly Soil & Crop Digest</strong>
+                    <span>Send weekly health trend PDF to registered email</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="toggle-emails" checked onchange="saveAppToggles()" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="toggle-item">
+                  <div class="toggle-meta">
+                    <strong>Dark Theme Mode</strong>
+                    <span>Switch interface to high-contrast night viewing</span>
+                  </div>
+                  <label class="switch">
+                    <input type="checkbox" id="toggle-darkmode" onchange="toggleDarkMode(this.checked)" />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+              </div>
+
+              <h4 class="mt-4">Technical Stack Grounding</h4>
+              <div class="tech-grounding-tags">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python 3.10</span>
+                <span class="tech-tag"><i class="fa-solid fa-eye"></i> OpenCV 4.13</span>
+                <span class="tech-tag"><i class="fa-solid fa-fire"></i> Grad-CAM XAI</span>
+                <span class="tech-tag"><i class="fa-solid fa-flask"></i> Flask REST API</span>
+                <span class="tech-tag"><i class="fa-solid fa-chart-pie"></i> Chart.js</span>
+                <span class="tech-tag"><i class="fa-solid fa-map"></i> Leaflet.js</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> SQLite</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main> <!-- /main-wrapper -->
+
+    </div> <!-- /main-wrapper -->
+
+    <!-- MOBILE BOTTOM NAVIGATION (Panel 18) -->
+    <nav class="mobile-bottom-nav">
+      <button class="mob-nav-btn active" onclick="navigateTo('dashboard')">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </button>
+      <button class="mob-nav-btn" onclick="navigateTo('scan-options')">
+        <i class="fa-solid fa-camera"></i>
+        <span>Scan</span>
+      </button>
+      <button class="mob-nav-btn" onclick="navigateTo('farm-mgmt')">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span>Farm</span>
+      </button>
+      <button class="mob-nav-btn" onclick="navigateTo('history')">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <span>History</span>
+      </button>
+    </nav>
+
+  </div> <!-- /app-container -->
+
+  <!-- SPECIMEN REJECTED MODAL (Non-Plant / Human / Object Gate) -->
+  <div id="rejected-specimen-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-content card" style="max-width: 560px; text-align: center; border-top: 6px solid var(--danger); padding: 0; overflow: hidden;">
+      <!-- Red Header -->
+      <div style="background: linear-gradient(135deg, #991B1B, #DC2626); padding: 28px 24px 20px; color: white;">
+        <div style="font-size: 52px; margin-bottom: 10px;" id="rej-modal-icon">⚠️</div>
+        <h3 style="font-size: 20px; font-weight: 800; margin: 0 0 6px;" id="rej-modal-title">Image Rejected — Not a Leaf!</h3>
+        <div id="rej-modal-badge" style="font-size: 13px; background: rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 14px; display: inline-block;">
+          Detected: Human Person / Face (96%)
+        </div>
+      </div>
+
+      <div style="padding: 20px 24px;">
+        <!-- What we require -->
+        <div style="background: #FEF2F2; border: 1px solid #FECACA; border-radius: 10px; padding: 14px; margin-bottom: 16px; text-align: left;">
+          <strong style="font-size: 13px; color: #7F1D1D; display: block; margin-bottom: 8px;"><i class="fa-solid fa-circle-xmark"></i> Why was my photo rejected?</strong>
+          <p style="font-size: 13px; color: #991B1B; margin: 0;" id="rej-modal-desc">
+            SoilDoctor only analyzes <strong>real plant leaves and crop foliage</strong>. Please upload a clear photo of a leaf with visible surface.
+          </p>
+        </div>
+
+        <!-- What a good photo looks like -->
+        <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 10px; padding: 14px; margin-bottom: 16px; text-align: left;">
+          <strong style="font-size: 13px; color: #065F46; display: block; margin-bottom: 8px;"><i class="fa-solid fa-circle-check"></i> What makes a good leaf photo?</strong>
+          <ul style="font-size: 12.5px; color: #047857; margin: 0; padding-left: 18px; line-height: 1.8;">
+            <li>📸 Clear, focused photo of a single leaf</li>
+            <li>☀️ Taken in natural daylight (not too dark)</li>
+            <li>🍃 Full leaf visible — no hands/background objects</li>
+            <li>❌ No selfies, animals, or non-plant objects</li>
+          </ul>
+        </div>
+
+        <!-- AI Detection Breakdown -->
+        <div style="background: var(--bg-app); border-radius: 10px; padding: 12px; margin-bottom: 16px; text-align: left;" id="rej-detections-box">
+          <strong style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px;">🤖 AI Vision Detected:</strong>
+          <div id="rej-detections-list" style="font-size: 13px;"></div>
+        </div>
+
+        <div style="display:flex; gap: 12px; justify-content: center;">
+          <button class="btn btn-outline" onclick="closeRejectionModal()"><i class="fa-solid fa-xmark"></i> Close</button>
+          <button class="btn btn-primary" onclick="closeRejectionModal(); switchCaptureTab('upload'); navigateTo('capture');">
+            <i class="fa-solid fa-cloud-arrow-up"></i> Upload a Real Leaf Photo
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADD FIELD MODAL -->
+  <div id="add-field-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-content card">
+      <div class="card-header">
+        <h3>Register New Farm Field</h3>
+        <button class="close-modal-btn" onclick="closeAddFieldModal()">&times;</button>
+      </div>
+      <form id="add-field-form" onsubmit="submitNewField(event)">
+        <div class="form-group">
+          <label>Field Name / Identifier</label>
+          <input type="text" id="modal-field-name" class="form-control" placeholder="e.g. Field D (South)" required />
+        </div>
+        <div class="form-group">
+          <label>Primary Crop</label>
+          <select id="modal-field-crop" class="form-select">
+            <option value="Tomato">Tomato</option>
+            <option value="Rice">Rice</option>
+            <option value="Maize">Maize</option>
+            <option value="Potato">Potato</option>
+            <option value="Chilli">Chilli</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Acreage (Acres)</label>
+          <input type="number" id="modal-field-area" class="form-control" step="0.1" value="2.5" required />
+        </div>
+        <div class="form-actions mt-3">
+          <button type="button" class="btn btn-outline" onclick="closeAddFieldModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Field to Map</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating mobile toggle removed -->
+
+  <!-- External Vendor Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Application Logic -->
+  <script src="/static/js/app.js?v=scan-area-required-3"></script>
+</body>
+</html>

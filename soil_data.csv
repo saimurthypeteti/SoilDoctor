@@ -1,0 +1,601 @@
+Crop,pH,Nitrogen,Phosphorus,Potassium,Moisture,Temperature,Humidity,Growth_Stage,Fertilizer_Recommendation
+Maize,6.43,High,High,Low,Medium,18.5,91.5,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Rice,6.43,Normal,Low,Normal,Medium,23.6,84.0,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.14,Low,Normal,High,Medium,19.8,60.3,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,7.43,Normal,Normal,High,Medium,35.9,47.5,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.76,Low,Normal,Normal,Low,35.8,61.7,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,5.85,Normal,Low,Low,Medium,24.4,64.3,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Maize,6.74,High,High,Normal,Low,25.4,48.5,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Maize,7.77,Normal,High,Normal,Medium,23.1,61.8,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,7.27,Normal,Normal,Normal,Medium,23.9,63.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.13,Low,High,Normal,Medium,33.1,55.7,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.59,Normal,Normal,Normal,Low,23.4,79.8,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,5.7,Low,Normal,High,Medium,31.1,61.8,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.51,Normal,Normal,Normal,Medium,27.2,64.7,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.27,Low,Normal,Low,Medium,21.8,44.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.68,High,Low,Normal,Medium,25.7,78.4,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,5.89,Normal,Normal,High,Medium,35.5,74.8,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,6.09,Normal,Low,Normal,Medium,26.2,65.1,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,6.38,High,Low,Normal,Medium,25.3,56.4,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.21,Low,High,Normal,Medium,28.0,73.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.23,Normal,Normal,Normal,Low,33.9,63.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.74,Low,Normal,Low,High,33.1,91.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,7.56,Normal,Normal,High,Medium,21.0,64.6,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,7.05,Low,Normal,Low,Low,34.5,70.7,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.63,Normal,High,Normal,Low,20.9,73.3,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.39,Low,High,Normal,Medium,20.3,85.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.49,Normal,Normal,Normal,Medium,23.5,85.2,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.5,Low,Normal,Low,Medium,36.0,65.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.8,Normal,Normal,High,Low,20.8,48.1,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.31,Normal,Low,Normal,Medium,25.0,48.6,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Maize,6.26,High,Low,Normal,Low,19.1,53.9,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Maize,7.79,Low,Normal,Normal,Low,25.4,44.2,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.48,Low,Normal,High,Medium,20.2,79.6,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.42,Normal,Normal,Normal,Low,33.7,47.2,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,5.65,Normal,Normal,Low,High,19.0,79.6,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Wheat,7.25,Low,Normal,Low,Low,33.2,40.8,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.63,Low,Low,Low,Medium,20.1,80.3,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.17,Normal,Low,Normal,Medium,20.1,52.1,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,7.46,Normal,Normal,Normal,Medium,25.6,77.7,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.54,Low,Low,Normal,Medium,19.6,43.5,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.11,Normal,Normal,Normal,Low,30.6,66.6,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,7.02,Low,High,Normal,Low,33.0,64.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.28,Low,High,Normal,Medium,32.1,54.3,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.26,High,High,Normal,Low,31.6,76.5,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Tomato,6.87,Normal,Normal,Normal,Medium,34.3,60.7,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.34,Low,Normal,High,Low,31.6,87.8,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,6.05,High,Normal,Low,Medium,27.5,78.9,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,7.63,Low,Normal,Normal,Low,29.3,41.6,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,5.99,Low,Normal,Normal,Medium,20.4,86.0,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.11,Normal,Normal,Normal,Low,25.8,55.2,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,6.07,High,Normal,Normal,Medium,23.6,76.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.6,Normal,Low,Normal,Low,19.6,74.8,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Rice,5.89,Low,High,Normal,Medium,35.5,90.5,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.56,High,Normal,Normal,Medium,27.5,85.5,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.07,Normal,Low,High,Medium,32.5,61.1,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.7,Low,High,Normal,Medium,32.0,40.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.7,Low,Normal,Normal,Low,28.5,85.0,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,5.85,Normal,High,High,Low,24.7,83.4,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,5.99,Low,Low,Normal,Low,20.9,78.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,7.38,Low,High,Normal,Low,35.6,68.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,7.61,High,Normal,Normal,High,20.7,50.1,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Rice,6.31,High,Normal,Normal,Low,18.3,46.1,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Maize,6.93,Normal,Normal,Normal,Medium,24.9,60.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.21,Normal,Low,Normal,High,29.4,80.3,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Tomato,7.78,Normal,Normal,Normal,Low,25.6,42.6,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.88,Normal,Normal,Normal,Medium,33.1,73.8,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.14,Low,Normal,Normal,Low,23.8,89.5,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.47,Normal,Low,Low,Low,26.7,44.7,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Maize,6.69,Low,Low,Low,Medium,20.9,51.7,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.39,High,High,Low,Medium,34.1,47.8,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Maize,6.45,Low,Normal,Normal,Medium,21.6,51.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.68,Normal,Normal,Normal,Medium,34.0,81.0,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.41,Low,Normal,High,Medium,25.9,79.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.05,Low,High,Normal,Low,28.4,90.1,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,7.24,Normal,Normal,Low,Medium,23.5,91.4,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,7.75,High,Normal,Normal,Medium,18.6,77.2,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Wheat,6.62,Low,High,Normal,Low,31.0,65.3,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.26,Normal,Normal,Normal,Low,22.2,90.8,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.43,High,Normal,Normal,Medium,32.4,55.1,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Maize,7.43,Normal,Low,Low,Low,23.2,54.5,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,6.23,Low,Normal,Normal,High,27.3,73.4,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,6.33,Normal,Normal,High,High,18.2,63.5,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Potato,6.11,Low,Low,Low,Low,32.5,69.9,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.11,Normal,High,Low,Medium,28.2,76.1,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.98,Low,Low,Normal,Medium,23.3,46.5,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.72,Normal,Normal,Normal,Low,29.3,51.2,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,6.3,Low,Normal,Normal,Low,21.7,44.0,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,7.8,Low,Normal,Normal,Medium,27.6,47.1,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.75,Normal,Normal,Normal,Medium,31.5,40.3,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.63,Normal,Low,Normal,Medium,29.9,71.7,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.29,Normal,Normal,Normal,Low,28.2,79.6,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,6.28,Normal,High,Normal,Medium,18.6,48.8,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,7.38,Low,Low,Normal,Medium,28.2,85.6,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.29,High,Normal,Normal,Medium,29.6,42.7,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Tomato,7.7,High,Normal,High,Medium,30.1,69.7,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Potato,5.01,Normal,Low,Normal,Low,23.8,51.7,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Rice,6.46,Normal,Normal,High,Low,31.4,61.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.63,Low,Low,Low,Medium,31.6,91.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.45,Low,Normal,Low,Low,20.5,52.6,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.67,Normal,Normal,Normal,Medium,24.2,45.1,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,6.93,Normal,Normal,Normal,Low,36.0,68.9,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.48,Normal,Low,Normal,Medium,29.5,72.7,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,5.57,Low,Low,Normal,Medium,22.0,55.7,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.29,Normal,Normal,Normal,Medium,35.4,60.8,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.9,Normal,Normal,Normal,Medium,18.4,66.8,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.64,Normal,Low,Normal,Medium,24.4,79.8,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,7.15,Low,Normal,Normal,Medium,19.6,40.3,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.63,Low,Low,Normal,Medium,28.2,56.6,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.26,Normal,Low,Normal,High,31.1,56.0,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Wheat,6.73,Normal,High,Normal,Low,35.5,82.0,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.16,High,Normal,High,Medium,31.3,45.5,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.51,Normal,Normal,Normal,Medium,27.9,86.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.85,Normal,Normal,Low,Medium,32.1,54.8,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.54,High,Low,Low,Medium,21.3,69.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,5.91,Low,Normal,Normal,Medium,28.5,55.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.89,Normal,Low,Normal,Low,21.8,50.4,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Maize,7.24,Normal,Normal,Normal,Low,23.7,88.2,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,6.31,Normal,Low,High,Medium,21.7,66.9,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.74,Normal,Low,High,Low,19.9,44.6,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,5.93,Normal,Normal,Normal,Medium,21.6,48.5,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,5.84,Low,Low,Normal,Low,19.8,80.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.49,High,Normal,High,Low,34.2,61.0,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Wheat,6.08,Low,Normal,High,Low,35.3,47.9,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.64,Low,Normal,Low,Medium,22.7,46.6,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.63,Low,Normal,Normal,Low,33.9,75.8,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.17,Normal,Normal,Normal,High,30.4,84.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Tomato,6.32,Low,Low,Normal,Medium,26.1,78.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.53,Low,Low,Normal,Medium,18.6,89.8,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.45,Low,Low,Normal,Low,35.2,82.8,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,5.94,Low,High,High,Medium,32.3,47.6,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.25,High,High,High,Medium,28.9,86.1,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Potato,6.35,Low,Normal,High,Medium,21.6,87.0,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.35,High,Normal,Low,Medium,18.7,46.7,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,7.49,Normal,Normal,Normal,Medium,19.5,51.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,7.04,Low,Normal,Low,High,24.1,67.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Rice,5.72,Low,Normal,Low,Medium,26.6,59.5,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.64,Normal,Normal,High,Medium,34.7,89.2,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.19,High,High,Normal,Medium,25.4,70.8,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,7.19,Normal,Low,High,Medium,26.5,52.9,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,6.19,Low,Normal,Low,Low,25.4,79.1,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.78,High,High,Normal,Low,30.7,73.2,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Rice,6.14,Low,Normal,Normal,High,22.5,74.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.48,Normal,Low,Low,Low,25.2,71.9,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,6.3,High,Normal,Low,Medium,21.0,84.4,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,7.09,Low,Low,Normal,Medium,22.7,60.8,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.53,Normal,Normal,Normal,Medium,19.1,55.6,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.67,Low,Normal,Normal,Low,20.6,80.5,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,7.48,Low,Low,High,Medium,18.8,63.6,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.59,Low,Normal,Normal,Low,35.0,80.0,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,5.96,High,High,High,High,22.5,45.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Tomato,7.17,Normal,High,Normal,Medium,23.5,75.0,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.64,Low,Normal,Normal,Medium,21.9,40.9,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.52,Normal,Low,Normal,Medium,25.7,82.5,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,7.28,High,Normal,High,Low,22.5,65.4,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Chilli,6.67,Low,Normal,Low,Medium,32.0,69.6,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.23,Low,Normal,Normal,High,28.5,56.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,7.25,Normal,High,High,Medium,20.5,54.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.76,Low,Normal,Normal,Medium,31.0,48.7,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.17,High,Normal,Normal,Low,21.4,77.9,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,6.14,Normal,Normal,Normal,Medium,27.3,76.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.31,Normal,Normal,Low,Medium,23.2,61.6,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Rice,5.72,High,Normal,Low,High,24.6,45.3,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Potato,5.71,Normal,Normal,Normal,Medium,19.1,59.8,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.94,Low,Normal,Low,High,29.7,77.7,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,5.8,Low,Normal,Low,Medium,28.6,44.2,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.29,Low,Low,Normal,High,29.4,55.2,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,7.56,Low,Normal,Normal,High,31.0,53.2,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,6.14,Normal,Normal,Normal,Medium,34.8,62.2,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,7.47,Normal,Normal,Normal,Low,29.6,59.1,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,6.79,Low,Normal,Normal,Low,31.5,86.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.39,Normal,High,Normal,High,29.2,72.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Potato,6.04,Normal,Low,Normal,Medium,35.6,72.6,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,6.38,Normal,Low,Normal,Medium,23.4,79.8,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.43,Normal,Normal,Low,High,30.4,62.8,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Potato,5.61,Low,Normal,Low,Low,32.8,68.8,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.21,Low,Normal,Normal,Medium,33.9,83.9,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.53,Low,High,Normal,Medium,22.5,56.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.51,High,Normal,Normal,Low,26.7,89.1,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Maize,7.41,High,Normal,Normal,Medium,30.6,75.1,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Wheat,6.92,Normal,Normal,Normal,Medium,22.4,59.3,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.54,Normal,High,Normal,Medium,35.5,92.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,7.23,Low,Normal,High,Low,33.4,65.0,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.92,Normal,Low,Normal,Medium,33.9,47.0,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.04,Normal,Normal,Normal,Low,32.8,57.3,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.39,Normal,Normal,Low,Medium,23.6,86.1,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,6.42,Low,Normal,Normal,High,29.2,51.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,6.62,Normal,Normal,Normal,High,29.7,47.4,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,7.09,Normal,Low,Low,Low,25.6,45.7,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,7.31,Normal,Normal,Normal,Low,29.8,87.4,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,6.98,Low,Normal,Normal,Medium,26.8,42.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.53,High,Normal,Normal,Low,28.8,86.5,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Rice,6.05,Normal,High,High,Medium,23.9,81.0,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.0,Normal,Normal,Normal,Low,24.1,78.3,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,7.76,Normal,High,Normal,Low,29.1,41.6,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,5.89,Normal,Low,Low,Low,29.0,53.6,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,6.24,Normal,High,Normal,Low,23.1,44.0,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,7.51,Normal,High,Normal,Medium,23.2,69.1,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.94,Low,Normal,High,Low,33.5,76.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.11,Normal,Normal,Normal,Medium,30.0,89.4,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.53,Normal,Normal,Normal,Medium,22.0,49.2,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.58,Normal,Normal,Normal,High,28.6,83.5,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,6.6,Normal,High,Low,Low,25.0,57.3,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,6.01,Low,Normal,High,Medium,23.2,59.6,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.16,Normal,High,Low,Medium,28.2,49.8,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,7.58,Normal,Normal,Normal,Low,34.2,49.7,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,7.73,High,Low,Normal,Medium,20.0,76.9,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.6,High,Low,High,Medium,33.0,56.9,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.09,Low,Low,Normal,Medium,28.0,58.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.55,High,Normal,Normal,Low,23.6,81.5,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.91,Low,High,High,Low,21.7,80.7,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,5.94,Low,Normal,Low,Medium,22.1,78.7,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.68,Low,Normal,Low,Medium,31.9,50.6,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.82,Normal,Normal,Low,Medium,20.6,64.8,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,7.16,Normal,Low,Normal,Medium,35.9,80.2,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.53,Low,Low,Low,High,18.6,53.8,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Rice,6.68,Normal,Low,Normal,Medium,25.2,91.2,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,6.25,Normal,Low,Normal,Low,31.2,89.0,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Rice,6.61,Low,Normal,Normal,Medium,31.4,80.5,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.3,Low,Normal,Normal,Low,24.3,73.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.56,Low,Normal,Normal,Medium,26.7,51.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.69,Low,High,Normal,Medium,28.2,44.2,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.07,Normal,Normal,Normal,Low,29.1,65.3,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,6.28,Normal,Normal,Normal,Medium,19.7,84.4,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.62,Low,Normal,Normal,Low,31.0,82.6,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.42,High,Normal,Normal,Low,31.7,63.9,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Tomato,6.26,Normal,Low,Low,Low,25.9,47.7,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,7.46,Low,Normal,Low,Medium,18.9,51.5,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.69,Low,Normal,Normal,Medium,21.8,60.8,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.41,High,Normal,Normal,Low,25.7,40.0,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.96,Normal,Normal,High,Low,28.1,58.2,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.84,Low,Low,High,Medium,20.1,45.5,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,5.93,Low,Low,High,Medium,31.3,59.1,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.31,High,Normal,Normal,Medium,20.3,84.9,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.12,Normal,Normal,Normal,Medium,33.2,54.4,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,6.76,Low,Low,Normal,Low,18.0,91.4,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,5.55,Low,Low,Low,Low,25.0,51.8,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.62,Low,Normal,Normal,Low,29.3,47.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.91,Low,Normal,Normal,High,21.0,56.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,5.85,Normal,Normal,Normal,Medium,22.1,61.7,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,6.08,Low,High,Normal,Low,21.7,73.3,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.34,Low,Low,Low,Medium,21.8,73.8,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.32,Low,Normal,Normal,Low,18.7,43.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.16,Low,High,Normal,Low,35.6,78.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,5.84,Normal,Normal,Normal,Medium,29.8,59.5,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.95,Low,Low,High,Low,30.3,49.6,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.54,Low,Normal,Normal,Low,30.0,91.6,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.35,Low,Normal,Low,Medium,25.0,71.5,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.6,High,High,Normal,Medium,30.7,60.6,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,5.95,Normal,Low,Low,Low,18.6,63.6,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,6.75,Low,Normal,Normal,Medium,35.5,57.8,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,5.86,High,Low,Normal,Medium,20.2,50.8,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.03,Normal,High,Low,Medium,23.0,87.8,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,6.48,Low,Normal,Normal,Medium,25.6,46.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.73,Low,High,Low,High,25.0,89.2,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,6.8,Normal,Low,Normal,Low,35.7,91.9,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,6.18,Normal,Normal,Normal,Low,21.2,55.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.48,Low,High,Normal,Medium,20.3,44.3,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.07,Normal,Low,Normal,Medium,33.1,91.5,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.57,Low,Low,Normal,Low,30.2,72.9,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.36,Low,Normal,Normal,Medium,22.0,54.9,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.12,Normal,Low,Normal,High,32.2,74.0,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Rice,6.14,Low,Normal,High,Medium,21.9,91.6,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.7,Normal,High,Normal,High,28.7,72.2,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,5.92,Normal,High,Normal,Medium,18.8,74.8,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.93,Low,Normal,Normal,Medium,22.5,50.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.65,Low,Normal,Normal,Low,20.6,61.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,7.52,Normal,Low,Normal,Medium,19.3,77.9,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,5.86,Normal,Normal,Low,Low,21.8,62.7,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,5.84,High,High,Low,Medium,33.7,84.6,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Rice,6.53,Normal,Normal,Normal,Medium,29.0,59.8,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.06,Low,Normal,Normal,Medium,21.6,87.1,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.3,Low,Low,High,Medium,33.0,45.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.3,Low,Normal,Low,Medium,29.2,52.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.35,Low,Normal,Normal,Medium,27.7,65.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.64,Low,Normal,Normal,Medium,28.9,83.7,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.18,Normal,Normal,Normal,Medium,25.5,69.3,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.7,Low,High,Low,High,20.8,68.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Rice,6.57,Normal,Normal,Normal,High,30.4,76.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Rice,6.33,Low,Low,Normal,Medium,18.6,63.0,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.67,Normal,Normal,Normal,Low,25.0,46.7,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.03,High,Low,Low,Low,25.3,67.0,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,6.23,Low,High,Normal,Low,34.5,85.8,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.76,Normal,Normal,Normal,Low,25.0,68.1,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,7.69,Low,Normal,Low,Low,19.7,52.5,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.51,Low,Low,Low,Low,18.2,64.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.19,High,High,Normal,High,34.6,85.7,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Potato,5.03,Low,Normal,Normal,Medium,24.5,72.6,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.63,Normal,Normal,Normal,Medium,35.5,40.5,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,7.01,High,Normal,Low,Low,22.9,43.7,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Tomato,6.05,Low,Normal,High,Low,29.0,66.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.49,Normal,Low,Normal,Medium,30.7,75.2,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.37,High,High,Low,Low,21.6,48.6,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,7.74,Low,Normal,Low,Low,33.9,47.5,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.99,Low,High,High,Medium,23.8,70.0,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.61,Normal,Normal,High,Medium,32.2,84.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,7.36,Normal,Normal,Low,Medium,30.0,50.0,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,7.43,Low,Low,High,Medium,31.5,83.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.43,Low,High,Low,High,30.4,60.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Wheat,6.42,Low,Normal,High,Medium,27.0,59.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.09,Normal,Normal,Normal,High,21.2,87.9,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Tomato,5.94,Normal,Normal,High,Low,21.0,43.6,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,7.76,Normal,Normal,High,High,23.1,85.6,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Potato,5.75,Normal,Normal,Normal,Low,31.5,52.4,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.18,Normal,Low,High,Medium,23.3,44.1,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,6.26,High,Normal,High,High,32.7,62.5,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Rice,6.06,Normal,High,Normal,Low,27.9,43.4,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.88,Low,Low,Normal,Low,35.5,87.4,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.11,Low,Normal,Normal,Low,31.8,65.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.75,High,Low,Normal,Medium,25.1,86.0,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,6.47,Low,Normal,Normal,Medium,20.0,55.3,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.98,Low,Normal,Normal,Low,24.5,82.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.8,Normal,Normal,High,Medium,20.1,80.5,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.94,Normal,Low,Normal,High,26.7,75.7,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Wheat,5.87,High,Normal,Normal,High,32.6,73.0,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Improve field drainage to avoid root hypoxia.
+Tomato,7.37,Low,Low,Low,Medium,18.7,67.4,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.51,Low,Normal,Low,High,20.1,51.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.49,Normal,Normal,Low,High,33.4,70.5,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Rice,5.6,Low,Normal,Normal,Low,35.3,77.0,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,5.85,Low,Normal,Low,High,26.5,41.6,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Potato,5.17,Low,Normal,Normal,Medium,18.1,67.7,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,5.84,Low,Normal,Normal,Medium,33.3,51.1,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.87,Normal,Low,Normal,Low,21.4,81.4,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,6.02,Low,High,Normal,High,30.2,89.1,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,6.72,Low,Low,High,Medium,30.5,46.4,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.87,Normal,Normal,Normal,Low,35.7,89.6,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,7.25,High,Normal,Low,Medium,24.2,47.9,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,6.49,Low,Low,Low,High,33.9,53.8,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.74,High,Normal,Normal,Medium,32.2,88.2,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Chilli,6.43,Low,Low,Low,Medium,35.2,41.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.42,Normal,High,Low,Low,24.4,77.9,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,6.62,High,Normal,Low,Medium,19.8,79.4,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.63,Normal,Low,Normal,Low,23.5,47.1,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Maize,7.17,Normal,High,Normal,Medium,35.1,87.1,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,7.11,Low,Normal,Normal,Low,25.8,81.4,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,7.36,Low,Normal,Normal,Low,19.7,53.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.09,Normal,High,Normal,Low,35.3,42.0,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,7.52,Low,Normal,Normal,Medium,24.5,54.3,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.15,Low,Normal,Normal,Low,27.0,67.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.04,Low,Normal,High,Low,21.2,47.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,7.73,Low,Normal,Normal,High,21.6,69.7,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.32,Normal,Low,Normal,Medium,29.6,86.9,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,7.44,Normal,Normal,Low,Medium,33.1,71.1,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,7.4,Low,Normal,Low,Low,28.9,90.4,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.19,Normal,High,High,Medium,30.0,51.3,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.43,Low,Normal,Low,Low,29.6,43.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.15,Normal,Normal,Normal,Low,32.6,77.7,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,7.63,High,Normal,Low,Low,27.4,78.8,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Rice,6.17,Normal,Low,Low,Medium,26.6,47.2,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,6.04,Normal,Normal,High,Medium,30.5,63.8,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.64,Normal,Low,Normal,Low,20.2,89.9,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,6.02,Normal,Normal,High,Medium,35.6,40.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,6.84,Normal,Low,Normal,Medium,22.3,45.4,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,6.57,High,Normal,Normal,Medium,28.1,40.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,6.89,Normal,High,Low,Low,27.4,81.0,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Wheat,6.51,Normal,High,Low,Medium,31.1,85.1,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.43,Normal,Low,Normal,Medium,27.9,44.9,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,7.75,Low,Normal,Normal,Medium,18.4,43.6,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.61,Normal,Low,Normal,Low,31.5,51.9,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.82,Low,Low,Normal,Medium,21.2,83.8,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.58,High,High,Normal,Medium,29.3,60.3,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Wheat,7.4,Normal,Low,Normal,Low,28.6,68.5,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,7.11,Normal,Normal,Low,Low,22.8,77.5,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,6.88,High,Normal,Normal,Medium,18.7,77.0,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Potato,5.51,Normal,High,High,Low,20.0,88.7,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.24,Normal,Normal,Normal,High,31.1,62.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Maize,6.45,High,Normal,Normal,Medium,20.5,42.6,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Chilli,5.87,Low,Normal,Normal,Medium,33.8,51.7,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.76,Low,Normal,Normal,Low,35.9,52.2,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.47,Normal,Low,Normal,High,21.3,67.6,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Chilli,7.28,Low,Normal,Normal,Medium,23.2,44.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.73,Low,Normal,Normal,Medium,19.8,68.3,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.99,Normal,High,Low,Low,25.0,53.8,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Wheat,7.73,Normal,High,Low,Medium,35.8,74.3,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,6.38,Low,Normal,Normal,Low,32.8,69.3,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.68,Low,Normal,Low,Low,32.2,62.7,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.66,Normal,Low,Normal,Medium,26.2,88.8,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Maize,6.04,Normal,Low,Normal,Low,25.7,83.3,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,5.86,Low,Normal,Normal,High,22.5,55.2,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.71,Low,Normal,Normal,Low,22.4,51.3,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,7.59,Low,High,Low,High,27.0,68.3,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Potato,5.79,Low,Low,Low,Medium,24.0,91.5,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.38,High,Normal,Normal,Medium,26.6,74.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,5.93,Low,Normal,Normal,Low,22.4,68.8,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,6.27,High,Low,Low,Medium,20.6,76.0,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,5.93,High,High,High,Low,30.9,71.0,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,5.96,Low,Low,Normal,Medium,29.5,75.1,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.09,Normal,Normal,Low,Medium,30.8,63.7,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,7.48,Low,Low,Normal,Medium,24.8,70.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.79,Normal,Normal,High,Medium,31.9,54.3,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.79,Normal,Normal,Normal,High,22.2,63.7,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,7.01,Normal,Low,Normal,Medium,34.9,64.2,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,5.5,Normal,High,Normal,Medium,20.7,85.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,7.1,Low,Normal,Normal,Medium,33.7,43.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.29,Low,Normal,Normal,Medium,34.2,64.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.2,Low,High,High,Medium,23.3,73.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.42,Normal,Low,Normal,Medium,19.4,55.6,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,6.35,High,Normal,Low,Low,25.7,67.9,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Wheat,7.6,Normal,Normal,High,Medium,27.0,75.2,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.06,Low,Normal,Normal,Medium,30.7,82.0,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.67,High,High,Normal,Medium,22.1,62.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Maize,7.53,Low,Normal,Normal,High,18.0,76.4,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Wheat,7.05,Normal,Normal,Normal,High,31.2,50.4,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Tomato,7.33,Normal,Low,Normal,Low,21.3,86.7,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Potato,6.32,Low,Normal,Low,Medium,18.7,55.2,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.63,Low,Normal,Low,Medium,31.9,88.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.05,Normal,Low,Normal,Medium,24.0,43.5,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,7.49,High,High,High,Low,20.1,81.4,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.11,Normal,Normal,Low,Medium,22.2,66.4,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,7.05,Low,Low,Normal,High,21.9,74.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Wheat,7.67,Low,Low,Normal,Medium,30.1,71.4,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,5.92,Normal,High,Normal,Low,18.1,79.5,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,7.56,Low,Low,Normal,High,26.2,46.7,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Rice,6.58,Low,Normal,Normal,Low,29.3,57.3,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,7.42,Normal,Normal,Normal,Medium,28.9,79.4,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,6.32,Low,Normal,High,Low,18.4,82.4,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.22,Low,Low,High,Low,34.5,57.2,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.05,Low,Normal,Low,Low,25.2,42.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.7,Low,Low,Normal,Medium,34.0,52.0,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.25,Low,Normal,Normal,Low,22.3,72.5,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.56,Normal,Normal,Normal,Medium,30.1,81.3,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.97,Normal,Normal,Normal,Low,20.2,66.2,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.69,Low,Normal,Normal,High,19.7,73.0,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Wheat,7.24,High,Low,High,Medium,33.6,52.6,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Wheat,5.95,Low,Normal,Normal,Medium,26.5,45.6,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,5.54,Normal,Low,Low,Medium,20.4,66.7,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.97,Normal,Normal,Normal,High,24.4,50.5,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Wheat,7.05,Normal,High,Low,High,30.8,46.5,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Wheat,7.47,Normal,Normal,Normal,Low,22.2,59.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.68,Low,Normal,Low,Low,29.9,68.3,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.14,High,Normal,Normal,Medium,22.9,73.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.6,Low,Normal,Low,Low,31.2,57.1,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,5.86,Normal,High,Normal,Low,35.5,70.4,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.96,Normal,Normal,High,Low,28.8,43.9,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,6.16,Normal,Low,Normal,Low,34.4,60.1,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,6.05,Normal,Normal,Normal,Low,27.5,73.6,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.28,High,Normal,Normal,Medium,21.9,66.9,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.68,Low,Normal,Normal,High,23.9,51.6,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,6.37,Normal,Low,Normal,High,25.1,59.8,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Wheat,7.01,High,Low,Normal,Medium,21.1,86.8,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.56,Low,Normal,Low,Low,22.0,74.0,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.5,Normal,Normal,High,High,23.6,80.8,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Potato,5.62,Normal,Low,Normal,Low,34.9,42.8,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,6.12,Low,Normal,Low,High,26.3,53.5,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,7.04,Normal,Normal,High,Low,18.5,73.4,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,5.96,Normal,Normal,Normal,Medium,29.6,70.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Maize,5.96,Low,Low,Normal,Medium,25.4,86.8,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.01,Normal,High,Low,Medium,30.5,89.1,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.66,Low,Low,Normal,Medium,28.0,83.8,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.39,Normal,Low,Low,Medium,33.8,85.3,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,7.47,Normal,Low,Normal,Medium,19.7,69.7,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.18,Normal,Normal,Low,Medium,35.0,44.8,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,7.73,Normal,Normal,Normal,Medium,24.7,54.9,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.73,Low,High,Low,Low,33.5,88.9,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.34,Normal,Normal,Low,Medium,32.5,62.6,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.84,Low,Normal,Normal,Medium,30.0,46.7,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.6,Normal,Low,High,Medium,23.2,52.9,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,7.67,Normal,Normal,Low,Medium,29.4,90.5,Maturity,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,5.82,High,Normal,Low,High,32.6,71.0,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Chilli,6.05,Normal,Normal,Normal,Medium,30.2,69.0,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,6.33,Normal,Normal,Low,Medium,31.2,70.4,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,6.29,Low,Normal,Normal,Low,23.6,58.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,6.82,Normal,Normal,Normal,Medium,20.7,85.6,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,7.15,High,Normal,Normal,High,23.7,55.1,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,6.04,Normal,Low,Low,Medium,26.0,49.2,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.48,High,Normal,Low,High,18.8,76.0,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Rice,6.38,Low,Normal,Normal,Low,21.4,43.6,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.45,Normal,Low,Normal,Medium,26.0,42.2,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,5.85,Normal,Normal,Low,Low,35.9,59.7,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Wheat,6.61,Low,Normal,Normal,Medium,21.1,55.1,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.08,Normal,Low,Normal,Medium,28.0,42.8,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Maize,6.85,Normal,Normal,Normal,Low,25.2,83.5,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Chilli,7.19,Low,Low,Normal,Low,31.8,89.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.85,Normal,Low,Normal,Low,29.0,60.4,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Rice,5.98,High,Low,Normal,Low,33.2,53.8,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.28,Low,High,Normal,Medium,34.6,71.0,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.12,Normal,Normal,Low,Medium,18.2,85.5,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,6.15,Low,High,Normal,High,27.5,81.0,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Maize,7.37,Low,Normal,Normal,High,29.1,73.6,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,5.92,Low,Normal,High,Low,19.7,79.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.44,Normal,Normal,Low,Medium,21.2,44.0,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,7.18,Normal,High,Normal,Low,27.7,49.8,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Maize,6.26,Low,High,Low,Low,31.7,48.0,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.74,High,Normal,Normal,High,21.8,68.4,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Improve field drainage to avoid root hypoxia.
+Maize,7.32,Low,Normal,Normal,Medium,27.4,41.1,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.23,High,High,High,Low,28.7,89.7,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Potato,5.28,Normal,Normal,Low,Medium,27.9,83.0,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.57,Low,Low,High,Medium,35.8,50.8,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,7.1,Low,Low,Normal,Medium,30.9,73.5,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,7.25,High,Low,Normal,Low,27.6,56.2,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Wheat,7.8,Normal,Normal,Normal,Medium,29.0,42.0,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.65,Normal,Low,Low,Low,21.5,49.9,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.57,Low,Low,Low,High,20.5,46.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Rice,5.77,Low,Low,Low,Medium,21.4,88.7,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.14,Normal,Normal,Low,Low,35.5,80.7,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Wheat,7.48,Low,High,Normal,Low,18.2,41.8,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.22,Normal,Low,Normal,High,24.9,47.7,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Chilli,6.14,Normal,Low,High,Medium,19.5,73.4,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Tomato,6.23,High,Normal,High,Medium,24.9,78.7,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,7.14,Normal,Normal,Normal,High,29.8,47.9,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Wheat,7.31,Normal,Low,Low,Low,20.6,43.0,Flowering,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.0,Normal,Normal,Low,Low,23.7,85.6,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Chilli,7.18,Normal,Normal,Normal,Low,24.4,76.1,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.17,Normal,High,Low,High,34.4,75.1,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Maize,6.0,High,Normal,Normal,Low,22.4,51.4,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Wheat,7.54,Normal,Normal,Normal,Low,32.6,83.2,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,5.51,Normal,Normal,Low,Low,22.4,79.0,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,6.34,Normal,Normal,Low,Low,32.6,73.9,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Chilli,6.33,High,Normal,High,Low,28.2,55.4,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Maize,7.03,Normal,Normal,Normal,Medium,27.8,53.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.16,Low,Normal,Normal,Low,30.0,73.1,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,7.52,Normal,Normal,Low,Low,26.6,86.3,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Chilli,7.56,Low,Normal,Normal,Medium,19.1,82.9,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.27,High,High,High,Medium,25.4,42.3,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Rice,5.72,Normal,Normal,Normal,Medium,22.5,83.7,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.47,Normal,Normal,High,Medium,36.0,45.0,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.62,Low,Normal,Normal,Medium,27.4,71.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.75,Low,Normal,Normal,Medium,33.3,50.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.57,High,Normal,Normal,High,32.5,61.0,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Tomato,7.18,Low,Normal,Normal,Medium,25.2,46.4,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.4,Normal,Normal,Low,Medium,25.6,72.8,Maturity,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Tomato,5.97,High,High,Normal,Medium,33.5,65.2,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Tomato,6.17,Low,Normal,Normal,Low,25.6,62.4,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Tomato,6.33,Normal,Normal,Normal,Low,30.3,58.6,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.42,Low,High,Normal,Medium,24.8,82.4,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.4,Low,Low,Normal,Low,31.4,70.8,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.2,Low,Normal,Normal,Medium,32.5,56.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.71,Low,Normal,Low,Low,24.4,75.5,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,6.25,High,Normal,Normal,High,18.5,58.2,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Improve field drainage to avoid root hypoxia.
+Chilli,6.39,Low,High,Normal,Low,31.7,82.0,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.91,High,Normal,Normal,Low,28.7,74.8,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Tomato,7.77,Normal,Normal,Low,Medium,32.4,62.0,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,6.1,Low,Normal,Normal,Medium,28.0,65.4,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.98,Normal,Normal,Low,Medium,21.4,70.0,Fruiting,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.78,Normal,Normal,Low,Low,23.4,52.8,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Tomato,6.17,Low,Normal,Normal,Medium,22.4,65.7,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.08,Normal,High,Low,Medium,26.0,50.5,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Potato,5.64,Normal,Low,High,Low,26.7,74.5,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Tomato,7.46,High,Low,Normal,Medium,31.6,51.2,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Maize,6.78,Low,Normal,Normal,Medium,19.1,40.7,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.34,Normal,Normal,Normal,Medium,27.0,49.7,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Tomato,7.6,High,High,Normal,Medium,29.6,88.9,Flowering,Apply gypsum or elemental sulfur to reduce soil alkalinity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Soil moisture is optimal.
+Wheat,7.15,High,Normal,Normal,Low,21.6,58.7,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Tomato,6.23,Normal,Normal,Normal,Medium,35.2,42.3,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,5.54,Low,High,Normal,Low,26.0,92.0,Flowering,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,7.67,Normal,Normal,High,Medium,33.6,91.0,Fruiting,Apply gypsum or elemental sulfur to reduce soil alkalinity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,6.26,Low,Low,High,Low,30.5,57.9,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.17,Low,Normal,Low,Low,27.9,54.3,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Rice,6.03,High,Low,High,Low,21.6,85.2,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.99,Normal,Normal,Low,Low,28.3,69.1,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Rice,5.62,Normal,Normal,Normal,High,33.3,73.0,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Chilli,7.7,Normal,Normal,Low,Medium,30.2,68.7,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Chilli,5.81,High,Normal,Normal,Low,30.9,87.2,Flowering,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Rice,6.43,Normal,High,Normal,High,23.8,49.8,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Improve field drainage to avoid root hypoxia.
+Rice,6.76,Normal,Low,Normal,Medium,33.0,65.1,Fruiting,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.1,Normal,Low,Low,High,20.2,63.9,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Improve field drainage to avoid root hypoxia.
+Wheat,7.36,Low,High,Normal,Medium,26.2,64.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Rice,6.56,Low,Normal,Low,Low,28.2,54.9,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Potato,5.9,High,Normal,Normal,Medium,34.4,48.5,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.43,Normal,Normal,Normal,Medium,29.8,40.1,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.14,Low,Normal,Normal,Medium,20.5,85.9,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,6.72,Normal,Normal,Normal,Medium,28.4,70.0,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.85,Normal,Normal,Normal,Medium,20.3,79.7,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.11,High,Normal,Normal,Low,32.3,64.3,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.33,High,Normal,Normal,Low,34.7,91.6,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Potato,5.73,Normal,Normal,Normal,Medium,32.3,83.7,Fruiting,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.85,Low,High,Normal,Medium,34.6,79.4,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,7.13,Normal,Low,High,Low,25.0,61.4,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Increase drip irrigation duration by 25%.
+Chilli,6.34,Low,High,High,Medium,21.0,42.2,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.25,Normal,Normal,Normal,Low,27.0,57.9,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.56,Normal,Normal,High,Medium,21.2,55.9,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Chilli,6.17,Low,Normal,Normal,Medium,35.1,50.4,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Tomato,6.7,Normal,Normal,Low,High,25.3,44.9,Flowering,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Maize,7.73,Normal,Low,Low,Medium,20.4,83.6,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Chilli,6.66,Low,Low,Normal,Low,27.3,79.3,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.14,Normal,Normal,Normal,Low,28.2,63.6,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.51,Normal,Normal,Normal,Low,27.0,63.3,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Rice,6.06,Low,Normal,Low,Low,24.4,79.0,Fruiting,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Maize,6.28,Low,Normal,Low,Medium,18.6,42.6,Flowering,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,6.18,Normal,Low,Normal,Medium,22.4,59.1,Vegetative,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Potato,5.22,Low,High,Normal,High,23.7,74.9,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Tomato,7.62,Normal,Normal,Low,High,19.9,78.2,Vegetative,Apply gypsum or elemental sulfur to reduce soil alkalinity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Improve field drainage to avoid root hypoxia.
+Tomato,6.6,High,Normal,Normal,Low,26.0,86.2,Fruiting,Withhold nitrogen to prevent excessive vegetative drop and encourage fruit set. Increase drip irrigation duration by 25%.
+Maize,6.68,Normal,Normal,Normal,Medium,31.9,58.1,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.5,Normal,Normal,Normal,Medium,24.9,77.2,Maturity,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Potato,5.79,Low,Low,Normal,Medium,23.7,60.0,Vegetative,Apply agricultural lime (calcium carbonate) to buffer acidity. Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Wheat,7.29,Low,Low,High,Low,28.6,59.2,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Wheat,6.9,Low,High,Normal,Medium,22.1,50.2,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Chilli,6.55,High,Normal,Low,Low,33.9,42.1,Vegetative,Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Increase drip irrigation duration by 25%.
+Maize,7.05,Low,Normal,Normal,Medium,22.6,40.0,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Maize,6.61,Normal,Low,Low,Medium,30.6,86.1,Maturity,Incorporate Di-Ammonium Phosphate (DAP 18-46-0) or rock phosphate. Soil moisture is optimal.
+Rice,6.65,Low,Normal,Normal,Medium,21.3,48.5,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Soil moisture is optimal.
+Potato,5.62,Normal,High,Low,Medium,34.2,41.5,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
+Wheat,6.78,Normal,Normal,Normal,Low,18.9,76.0,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Wheat,6.09,Normal,High,High,Medium,35.1,74.8,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Rice,6.61,Normal,High,Normal,Medium,35.8,66.1,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Soil moisture is optimal.
+Wheat,6.89,Normal,Normal,Normal,Low,33.2,41.9,Vegetative,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.91,Low,Normal,Low,High,35.0,41.2,Vegetative,Side-dress with soluble Urea (46% N) or organic blood meal. Improve field drainage to avoid root hypoxia.
+Chilli,6.93,Normal,Normal,Normal,Low,29.6,79.4,Fruiting,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,6.2,Low,Normal,Normal,Low,30.1,62.6,Maturity,Side-dress with soluble Urea (46% N) or organic blood meal. Increase drip irrigation duration by 25%.
+Chilli,5.99,Normal,Normal,Normal,Low,35.1,71.1,Flowering,Maintain balanced NPK (19-19-19) fertigation schedule. Increase drip irrigation duration by 25%.
+Potato,5.13,Normal,Normal,Low,Medium,19.4,68.6,Maturity,Apply agricultural lime (calcium carbonate) to buffer acidity. Apply Muriate of Potash (MOP 0-0-60) or wood ash to strengthen stalks. Soil moisture is optimal.
