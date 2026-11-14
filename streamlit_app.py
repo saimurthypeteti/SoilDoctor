@@ -1,7 +1,6 @@
 """Streamlit interface for the existing SoilDoctor Flask/AI backend."""
 
 import base64
-import json
 
 import streamlit as st
 
@@ -45,15 +44,16 @@ def field_picker(fields, key):
     if not fields:
         st.warning("No saved fields are available. Add a field in the Flask app first.")
         return None
+    fields_by_id = {int(field["id"]): field for field in fields}
     selected = st.selectbox(
         "Scan area (required)",
-        fields,
-        format_func=lambda field: (
-            f"{field['name']} · {field['area_acres']} acres · {field['crop']}"
+        list(fields_by_id),
+        format_func=lambda field_id: (
+            f"{fields_by_id[field_id]['name']} · {fields_by_id[field_id]['area_acres']} acres · {fields_by_id[field_id]['crop']}"
         ),
         key=key,
     )
-    return selected
+    return fields_by_id[selected]
 
 
 def show_image_data_url(value, caption):
@@ -169,9 +169,11 @@ def soil_scan(fields):
                         st.caption(visual.get("method", ""))
                     with right:
                         st.markdown("#### Supplied readings")
-                        st.write(f"**pH:** {nutrients.get('ph_value') or 'Not measured'}")
+                        ph_value = nutrients.get("ph_value")
+                        moisture_value = nutrients.get("moisture_pct")
+                        st.write(f"**pH:** {ph_value if ph_value is not None else 'Not measured'}")
                         st.write(f"**N / P / K:** {nutrients.get('n_status', '—')} / {nutrients.get('p_status', '—')} / {nutrients.get('k_status', '—')}")
-                        st.write(f"**Moisture:** {nutrients.get('moisture_pct') or 'Not measured'}")
+                        st.write(f"**Moisture:** {moisture_value if moisture_value is not None else 'Not measured'}")
                     show_image_data_url(result.get("soil_image"), "Analyzed soil photo")
                     st.markdown("#### Suggestions")
                     for recommendation in result.get("recommendations", []):
